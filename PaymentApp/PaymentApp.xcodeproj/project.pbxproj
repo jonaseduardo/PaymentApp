@@ -14,9 +14,13 @@
 		71265B9C239FFE69001AEE8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71265B9B239FFE69001AEE8D /* Assets.xcassets */; };
 		71265B9F239FFE69001AEE8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71265B9D239FFE69001AEE8D /* LaunchScreen.storyboard */; };
 		71265BA2239FFE69001AEE8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BA1239FFE69001AEE8D /* main.m */; };
+		C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		396DBEB369B68D6CCDC07885 /* Pods-PaymentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentApp.release.xcconfig"; path = "Target Support Files/Pods-PaymentApp/Pods-PaymentApp.release.xcconfig"; sourceTree = "<group>"; };
+		4FE3EC049DE1B6C9582AC3E6 /* Pods-PaymentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentApp.debug.xcconfig"; path = "Target Support Files/Pods-PaymentApp/Pods-PaymentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		71265B8C239FFE66001AEE8D /* PaymentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71265B8F239FFE66001AEE8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		71265B90239FFE66001AEE8D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				71265B8E239FFE66001AEE8D /* PaymentApp */,
 				71265B8D239FFE66001AEE8D /* Products */,
+				85DAAC9AA47F0B12AB24D5C3 /* Pods */,
+				839C2563D3D915888DEA6265 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,24 @@
 			path = PaymentApp;
 			sourceTree = "<group>";
 		};
+		839C2563D3D915888DEA6265 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85DAAC9AA47F0B12AB24D5C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FE3EC049DE1B6C9582AC3E6 /* Pods-PaymentApp.debug.xcconfig */,
+				396DBEB369B68D6CCDC07885 /* Pods-PaymentApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71265BA5239FFE69001AEE8D /* Build configuration list for PBXNativeTarget "PaymentApp" */;
 			buildPhases = (
+				2A4A1BEF8295386769A8332F /* [CP] Check Pods Manifest.lock */,
 				71265B88239FFE66001AEE8D /* Sources */,
 				71265B89239FFE66001AEE8D /* Frameworks */,
 				71265B8A239FFE66001AEE8D /* Resources */,
+				E2579A9FD35A42892A57E2EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A4A1BEF8295386769A8332F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaymentApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2579A9FD35A42892A57E2EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaymentApp/Pods-PaymentApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaymentApp/Pods-PaymentApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaymentApp/Pods-PaymentApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		71265B88239FFE66001AEE8D /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		71265BA6239FFE69001AEE8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FE3EC049DE1B6C9582AC3E6 /* Pods-PaymentApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +374,7 @@
 		};
 		71265BA7239FFE69001AEE8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 396DBEB369B68D6CCDC07885 /* Pods-PaymentApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
