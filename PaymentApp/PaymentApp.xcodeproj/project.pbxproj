@@ -14,6 +14,13 @@
 		71265B9C239FFE69001AEE8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71265B9B239FFE69001AEE8D /* Assets.xcassets */; };
 		71265B9F239FFE69001AEE8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71265B9D239FFE69001AEE8D /* LaunchScreen.storyboard */; };
 		71265BA2239FFE69001AEE8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BA1239FFE69001AEE8D /* main.m */; };
+		71265BB423A0339A001AEE8D /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BB323A0339A001AEE8D /* APIManager.m */; };
+		71265BB723A03861001AEE8D /* BaseJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BB623A03861001AEE8D /* BaseJSONModel.m */; };
+		71265BBA23A039CF001AEE8D /* CardIssuerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BB923A039CF001AEE8D /* CardIssuerModel.m */; };
+		71265BBD23A04373001AEE8D /* PaymentMethodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BBC23A04373001AEE8D /* PaymentMethodModel.m */; };
+		71265BC023A04CE8001AEE8D /* InstallmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BBF23A04CE8001AEE8D /* InstallmentModel.m */; };
+		71265BC323A12FEB001AEE8D /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BC223A12FEB001AEE8D /* SettingModel.m */; };
+		71265BC623A1355C001AEE8D /* PayerCostsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BC523A1355C001AEE8D /* PayerCostsModel.m */; };
 		C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +40,20 @@
 		71265B9E239FFE69001AEE8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71265BA0239FFE69001AEE8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71265BA1239FFE69001AEE8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		71265BB223A0339A001AEE8D /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		71265BB323A0339A001AEE8D /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		71265BB523A03861001AEE8D /* BaseJSONModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseJSONModel.h; sourceTree = "<group>"; };
+		71265BB623A03861001AEE8D /* BaseJSONModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseJSONModel.m; sourceTree = "<group>"; };
+		71265BB823A039CF001AEE8D /* CardIssuerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardIssuerModel.h; sourceTree = "<group>"; };
+		71265BB923A039CF001AEE8D /* CardIssuerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardIssuerModel.m; sourceTree = "<group>"; };
+		71265BBB23A04373001AEE8D /* PaymentMethodModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentMethodModel.h; sourceTree = "<group>"; };
+		71265BBC23A04373001AEE8D /* PaymentMethodModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodModel.m; sourceTree = "<group>"; };
+		71265BBE23A04CE8001AEE8D /* InstallmentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstallmentModel.h; sourceTree = "<group>"; };
+		71265BBF23A04CE8001AEE8D /* InstallmentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstallmentModel.m; sourceTree = "<group>"; };
+		71265BC123A12FEB001AEE8D /* SettingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingModel.h; sourceTree = "<group>"; };
+		71265BC223A12FEB001AEE8D /* SettingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
+		71265BC423A1355C001AEE8D /* PayerCostsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayerCostsModel.h; sourceTree = "<group>"; };
+		71265BC523A1355C001AEE8D /* PayerCostsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayerCostsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +122,18 @@
 		71265BAA23A02824001AEE8D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				71265BB523A03861001AEE8D /* BaseJSONModel.h */,
+				71265BB623A03861001AEE8D /* BaseJSONModel.m */,
+				71265BB823A039CF001AEE8D /* CardIssuerModel.h */,
+				71265BB923A039CF001AEE8D /* CardIssuerModel.m */,
+				71265BBB23A04373001AEE8D /* PaymentMethodModel.h */,
+				71265BBC23A04373001AEE8D /* PaymentMethodModel.m */,
+				71265BC123A12FEB001AEE8D /* SettingModel.h */,
+				71265BC223A12FEB001AEE8D /* SettingModel.m */,
+				71265BBE23A04CE8001AEE8D /* InstallmentModel.h */,
+				71265BBF23A04CE8001AEE8D /* InstallmentModel.m */,
+				71265BC423A1355C001AEE8D /* PayerCostsModel.h */,
+				71265BC523A1355C001AEE8D /* PayerCostsModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +148,8 @@
 		71265BAC23A0282F001AEE8D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				71265BB223A0339A001AEE8D /* APIManager.h */,
+				71265BB323A0339A001AEE8D /* APIManager.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -278,10 +313,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71265BB723A03861001AEE8D /* BaseJSONModel.m in Sources */,
 				71265B97239FFE66001AEE8D /* ViewController.m in Sources */,
+				71265BBA23A039CF001AEE8D /* CardIssuerModel.m in Sources */,
+				71265BC023A04CE8001AEE8D /* InstallmentModel.m in Sources */,
+				71265BC323A12FEB001AEE8D /* SettingModel.m in Sources */,
 				71265B91239FFE66001AEE8D /* AppDelegate.m in Sources */,
 				71265BA2239FFE69001AEE8D /* main.m in Sources */,
+				71265BC623A1355C001AEE8D /* PayerCostsModel.m in Sources */,
 				71265B94239FFE66001AEE8D /* SceneDelegate.m in Sources */,
+				71265BB423A0339A001AEE8D /* APIManager.m in Sources */,
+				71265BBD23A04373001AEE8D /* PaymentMethodModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
