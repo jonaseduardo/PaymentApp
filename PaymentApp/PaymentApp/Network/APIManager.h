@@ -8,12 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface APIManager : NSObject
 
-- (void)doRequest;
+//- (void)doRequest:(NSString *)methodName;
+- (void)doRequest:(NSString *)methodName parameters:(NSDictionary *)parameters response:(void (^)(NSMutableArray * _Nullable, NSError * _Nullable))response;
 
 @end
-
-NS_ASSUME_NONNULL_END

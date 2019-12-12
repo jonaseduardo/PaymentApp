@@ -21,6 +21,9 @@
 		71265BC023A04CE8001AEE8D /* InstallmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BBF23A04CE8001AEE8D /* InstallmentModel.m */; };
 		71265BC323A12FEB001AEE8D /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BC223A12FEB001AEE8D /* SettingModel.m */; };
 		71265BC623A1355C001AEE8D /* PayerCostsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BC523A1355C001AEE8D /* PayerCostsModel.m */; };
+		71265BC923A16725001AEE8D /* PaymentMethodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BC823A16725001AEE8D /* PaymentMethodsViewModel.m */; };
+		71265BCC23A16BF8001AEE8D /* PaymentMethodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BCB23A16BF8001AEE8D /* PaymentMethodsViewController.m */; };
+		71265BCF23A1B28F001AEE8D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BCE23A1B28F001AEE8D /* Constants.m */; };
 		C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,13 @@
 		71265BC223A12FEB001AEE8D /* SettingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
 		71265BC423A1355C001AEE8D /* PayerCostsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayerCostsModel.h; sourceTree = "<group>"; };
 		71265BC523A1355C001AEE8D /* PayerCostsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayerCostsModel.m; sourceTree = "<group>"; };
+		71265BC723A16725001AEE8D /* PaymentMethodsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentMethodsViewModel.h; sourceTree = "<group>"; };
+		71265BC823A16725001AEE8D /* PaymentMethodsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodsViewModel.m; sourceTree = "<group>"; };
+		71265BCA23A16BF8001AEE8D /* PaymentMethodsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentMethodsViewController.h; sourceTree = "<group>"; };
+		71265BCB23A16BF8001AEE8D /* PaymentMethodsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodsViewController.m; sourceTree = "<group>"; };
+		71265BCD23A1B28F001AEE8D /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		71265BCE23A1B28F001AEE8D /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		71265BD123A1B4EB001AEE8D /* PaymentApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PaymentApp-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,8 @@
 				71265B93239FFE66001AEE8D /* SceneDelegate.m */,
 				71265B95239FFE66001AEE8D /* ViewController.h */,
 				71265B96239FFE66001AEE8D /* ViewController.m */,
+				71265BCA23A16BF8001AEE8D /* PaymentMethodsViewController.h */,
+				71265BCB23A16BF8001AEE8D /* PaymentMethodsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -115,6 +127,8 @@
 		71265BA923A0281D001AEE8D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				71265BC723A16725001AEE8D /* PaymentMethodsViewModel.h */,
+				71265BC823A16725001AEE8D /* PaymentMethodsViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -141,6 +155,8 @@
 		71265BAB23A02829001AEE8D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				71265BCD23A1B28F001AEE8D /* Constants.h */,
+				71265BCE23A1B28F001AEE8D /* Constants.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -169,6 +185,7 @@
 			children = (
 				71265BA0239FFE69001AEE8D /* Info.plist */,
 				71265BA1239FFE69001AEE8D /* main.m */,
+				71265BD123A1B4EB001AEE8D /* PaymentApp-Prefix.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -316,13 +333,16 @@
 				71265BB723A03861001AEE8D /* BaseJSONModel.m in Sources */,
 				71265B97239FFE66001AEE8D /* ViewController.m in Sources */,
 				71265BBA23A039CF001AEE8D /* CardIssuerModel.m in Sources */,
+				71265BCC23A16BF8001AEE8D /* PaymentMethodsViewController.m in Sources */,
 				71265BC023A04CE8001AEE8D /* InstallmentModel.m in Sources */,
+				71265BCF23A1B28F001AEE8D /* Constants.m in Sources */,
 				71265BC323A12FEB001AEE8D /* SettingModel.m in Sources */,
 				71265B91239FFE66001AEE8D /* AppDelegate.m in Sources */,
 				71265BA2239FFE69001AEE8D /* main.m in Sources */,
 				71265BC623A1355C001AEE8D /* PayerCostsModel.m in Sources */,
 				71265B94239FFE66001AEE8D /* SceneDelegate.m in Sources */,
 				71265BB423A0339A001AEE8D /* APIManager.m in Sources */,
+				71265BC923A16725001AEE8D /* PaymentMethodsViewModel.m in Sources */,
 				71265BBD23A04373001AEE8D /* PaymentMethodModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +486,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K37UCBV45N;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PaymentApp/Supporting Files/PaymentApp-Prefix.pch";
 				INFOPLIST_FILE = "PaymentApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -485,6 +507,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K37UCBV45N;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PaymentApp/Supporting Files/PaymentApp-Prefix.pch";
 				INFOPLIST_FILE = "PaymentApp/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

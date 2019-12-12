@@ -7,7 +7,36 @@
 //
 
 #import "APIManager.h"
+#import "AFHTTPSessionManager.h"
+#import "PaymentMethodModel.h"
+
+static NSString * const BASE_URL = @"https://api.mercadopago.com/v1/";
 
 @implementation APIManager
+
+//- (void)doRequest:(NSString *)methodName {
+//    [self doRequest:methodName parameters:nil];
+//}
+
+- (void)doRequest:(NSString *)methodName parameters:(NSDictionary *)parameters response:(void (^)(NSMutableArray * _Nullable, NSError * _Nullable))response {
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@%@", BASE_URL, methodName];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:urlString parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+
+        if ([responseObject isKindOfClass:[NSArray class]]) {
+            NSMutableArray *paymentMethods = [PaymentMethodModel arrayOfModelsFromDictionaries:responseObject error:nil];
+            NSLog(@"JSON: %@", paymentMethods);
+            
+            response(paymentMethods, nil);
+        }
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        
+        response(nil, error);
+    }];
+}
 
 @end
