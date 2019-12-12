@@ -8,11 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class PaymentMethodCellViewModel;
+
 @interface PaymentMethodsViewModel : NSObject
 
-@property (nonatomic, strong) NSMutableArray * _Nullable paymentMethods;
-@property (nonatomic, copy, nullable) void (^callBack)(void);
+// Data
+@property (nonatomic, strong) NSArray * _Nullable cellViewModels;
+@property (nonatomic) NSInteger numberOfCells;
+
+// Notify
+@property (nonatomic, copy, nullable) void (^reloadTableView)(void);
 
 - (void)getPaymentMethods;
+
+- (PaymentMethodCellViewModel *_Nullable)getCellViewModel:(NSUInteger)index;
 
 @end

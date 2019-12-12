@@ -8,10 +8,14 @@
 
 #import "PaymentMethodsViewController.h"
 #import "PaymentMethodsViewModel.h"
+#import "PaymentMethodTableViewCell.h"
+#import "PaymentMethodCellViewModel.h"
+#import "UIImageView+AFNetworking.h"
 
-@interface PaymentMethodsViewController ()
+@interface PaymentMethodsViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) PaymentMethodsViewModel *paymentMethodsViewModel;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) PaymentMethodsViewModel *paymentMethodsViewModel;
 
 @end
 
@@ -35,19 +39,13 @@
     [self getPaymentMethods];
 }
 
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//     Get the new view controller using [segue destinationViewController].
-//     Pass the selected object to the new view controller.
-}
-
 #pragma mark - Bindings
 
 - (void)bindViewModel {
     
-    self.paymentMethodsViewModel.callBack = ^(){
-        
+    __weak UITableView *weakSelfTableView = self.tableView;
+    self.paymentMethodsViewModel.reloadTableView = ^(){
+        [weakSelfTableView reloadData];
     };
 }
 
@@ -56,6 +54,30 @@
 - (void)getPaymentMethods {
     
     [self.paymentMethodsViewModel getPaymentMethods];
+}
+
+#pragma mark - UITableView Delegate & DataSource
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    PaymentMethodTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PaymentMethodCell"];
+    
+    PaymentMethodCellViewModel *viewModel = [self.paymentMethodsViewModel getCellViewModel:indexPath.row];
+    cell.nameLabel.text = viewModel.name;
+    [cell.paymentImageView setImageWithURL:[NSURL URLWithString:viewModel.urlImage]];
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.paymentMethodsViewModel.numberOfCells;
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//     Get the new view controller using [segue destinationViewController].
+//     Pass the selected object to the new view controller.
 }
 
 @end

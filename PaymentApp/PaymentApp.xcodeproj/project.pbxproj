@@ -24,6 +24,8 @@
 		71265BC923A16725001AEE8D /* PaymentMethodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BC823A16725001AEE8D /* PaymentMethodsViewModel.m */; };
 		71265BCC23A16BF8001AEE8D /* PaymentMethodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BCB23A16BF8001AEE8D /* PaymentMethodsViewController.m */; };
 		71265BCF23A1B28F001AEE8D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BCE23A1B28F001AEE8D /* Constants.m */; };
+		71265BD523A2B950001AEE8D /* PaymentMethodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BD423A2B950001AEE8D /* PaymentMethodTableViewCell.m */; };
+		71265BD823A2C6C6001AEE8D /* PaymentMethodCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BD723A2C6C6001AEE8D /* PaymentMethodCellViewModel.m */; };
 		C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,10 @@
 		71265BCD23A1B28F001AEE8D /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		71265BCE23A1B28F001AEE8D /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		71265BD123A1B4EB001AEE8D /* PaymentApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PaymentApp-Prefix.pch"; sourceTree = "<group>"; };
+		71265BD323A2B950001AEE8D /* PaymentMethodTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentMethodTableViewCell.h; sourceTree = "<group>"; };
+		71265BD423A2B950001AEE8D /* PaymentMethodTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodTableViewCell.m; sourceTree = "<group>"; };
+		71265BD623A2C6C6001AEE8D /* PaymentMethodCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentMethodCellViewModel.h; sourceTree = "<group>"; };
+		71265BD723A2C6C6001AEE8D /* PaymentMethodCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodCellViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 			children = (
 				71265BA823A0280A001AEE8D /* ViewControllers */,
 				71265BA923A0281D001AEE8D /* ViewModels */,
+				71265BD223A2B925001AEE8D /* Views */,
 				71265BAA23A02824001AEE8D /* Models */,
 				71265BAC23A0282F001AEE8D /* Network */,
 				71265BAB23A02829001AEE8D /* Utils */,
@@ -129,6 +136,8 @@
 			children = (
 				71265BC723A16725001AEE8D /* PaymentMethodsViewModel.h */,
 				71265BC823A16725001AEE8D /* PaymentMethodsViewModel.m */,
+				71265BD623A2C6C6001AEE8D /* PaymentMethodCellViewModel.h */,
+				71265BD723A2C6C6001AEE8D /* PaymentMethodCellViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -197,6 +206,15 @@
 				71265B90239FFE66001AEE8D /* AppDelegate.m */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		71265BD223A2B925001AEE8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71265BD323A2B950001AEE8D /* PaymentMethodTableViewCell.h */,
+				71265BD423A2B950001AEE8D /* PaymentMethodTableViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		839C2563D3D915888DEA6265 /* Frameworks */ = {
@@ -330,7 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71265BD523A2B950001AEE8D /* PaymentMethodTableViewCell.m in Sources */,
 				71265BB723A03861001AEE8D /* BaseJSONModel.m in Sources */,
+				71265BD823A2C6C6001AEE8D /* PaymentMethodCellViewModel.m in Sources */,
 				71265B97239FFE66001AEE8D /* ViewController.m in Sources */,
 				71265BBA23A039CF001AEE8D /* CardIssuerModel.m in Sources */,
 				71265BCC23A16BF8001AEE8D /* PaymentMethodsViewController.m in Sources */,
