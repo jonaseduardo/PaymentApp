@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class PaymentMethodsViewModel;
+
 @interface PaymentMethodsViewController : UIViewController
+
+@property (strong, nonatomic) PaymentMethodsViewModel *paymentMethodsViewModel;
 
 @end

@@ -15,7 +15,6 @@
 @interface PaymentMethodsViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) PaymentMethodsViewModel *paymentMethodsViewModel;
 
 @end
 
@@ -35,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self configViews];
     [self bindViewModel];
     [self getPaymentMethods];
 }
@@ -47,6 +47,10 @@
     self.paymentMethodsViewModel.reloadTableView = ^(){
         [weakSelfTableView reloadData];
     };
+    
+    self.paymentMethodsViewModel.error = ^(NSString * _Nullable message){
+        // retry
+    };
 }
 
 #pragma mark - Custom Methods
@@ -56,21 +60,37 @@
     [self.paymentMethodsViewModel getPaymentMethods];
 }
 
-#pragma mark - UITableView Delegate & DataSource
+- (void)configViews {
+
+    self.title = @"Método de pago";
+}
+
+#pragma mark - UITableView DataSource & Delegate
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.paymentMethodsViewModel.numberOfCells;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80.0f;
+}
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     PaymentMethodTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PaymentMethodCell"];
     
     PaymentMethodCellViewModel *viewModel = [self.paymentMethodsViewModel getCellViewModel:indexPath.row];
-    cell.nameLabel.text = viewModel.name;
+
     [cell.paymentImageView setImageWithURL:[NSURL URLWithString:viewModel.urlImage]];
+    cell.nameLabel.text = viewModel.name;
+    cell.typeLabel.text = viewModel.paymentType;
     
     return cell;
 }
 
-- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.paymentMethodsViewModel.numberOfCells;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
 }
 
 #pragma mark - Navigation

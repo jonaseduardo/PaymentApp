@@ -7,20 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 
 @class PaymentMethodCellViewModel;
 
-@interface PaymentMethodsViewModel : NSObject
+@interface PaymentMethodsViewModel : BaseViewModel
 
-// Data
 @property (nonatomic, strong) NSArray * _Nullable cellViewModels;
 @property (nonatomic) NSInteger numberOfCells;
 
-// Notify
-@property (nonatomic, copy, nullable) void (^reloadTableView)(void);
-
 - (void)getPaymentMethods;
-
 - (PaymentMethodCellViewModel *_Nullable)getCellViewModel:(NSUInteger)index;
 
 @end

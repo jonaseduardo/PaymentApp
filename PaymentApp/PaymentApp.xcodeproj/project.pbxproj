@@ -26,6 +26,11 @@
 		71265BCF23A1B28F001AEE8D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BCE23A1B28F001AEE8D /* Constants.m */; };
 		71265BD523A2B950001AEE8D /* PaymentMethodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BD423A2B950001AEE8D /* PaymentMethodTableViewCell.m */; };
 		71265BD823A2C6C6001AEE8D /* PaymentMethodCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BD723A2C6C6001AEE8D /* PaymentMethodCellViewModel.m */; };
+		71265BDB23A3D60A001AEE8D /* BanksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BDA23A3D60A001AEE8D /* BanksListViewController.m */; };
+		71265BDE23A429AC001AEE8D /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BDD23A429AC001AEE8D /* BaseViewModel.m */; };
+		71265BE123A42C0B001AEE8D /* BankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BE023A42C0B001AEE8D /* BankTableViewCell.m */; };
+		71265BE423A42DB0001AEE8D /* BanksViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BE323A42DB0001AEE8D /* BanksViewModel.m */; };
+		71265BE723A42DEE001AEE8D /* BankCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BE623A42DEE001AEE8D /* BankCellViewModel.m */; };
 		C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +75,16 @@
 		71265BD423A2B950001AEE8D /* PaymentMethodTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodTableViewCell.m; sourceTree = "<group>"; };
 		71265BD623A2C6C6001AEE8D /* PaymentMethodCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentMethodCellViewModel.h; sourceTree = "<group>"; };
 		71265BD723A2C6C6001AEE8D /* PaymentMethodCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodCellViewModel.m; sourceTree = "<group>"; };
+		71265BD923A3D60A001AEE8D /* BanksListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanksListViewController.h; sourceTree = "<group>"; };
+		71265BDA23A3D60A001AEE8D /* BanksListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BanksListViewController.m; sourceTree = "<group>"; };
+		71265BDC23A429AB001AEE8D /* BaseViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
+		71265BDD23A429AC001AEE8D /* BaseViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
+		71265BDF23A42C0B001AEE8D /* BankTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankTableViewCell.h; sourceTree = "<group>"; };
+		71265BE023A42C0B001AEE8D /* BankTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankTableViewCell.m; sourceTree = "<group>"; };
+		71265BE223A42DAF001AEE8D /* BanksViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanksViewModel.h; sourceTree = "<group>"; };
+		71265BE323A42DB0001AEE8D /* BanksViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BanksViewModel.m; sourceTree = "<group>"; };
+		71265BE523A42DEE001AEE8D /* BankCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankCellViewModel.h; sourceTree = "<group>"; };
+		71265BE623A42DEE001AEE8D /* BankCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankCellViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +142,8 @@
 				71265B96239FFE66001AEE8D /* ViewController.m */,
 				71265BCA23A16BF8001AEE8D /* PaymentMethodsViewController.h */,
 				71265BCB23A16BF8001AEE8D /* PaymentMethodsViewController.m */,
+				71265BD923A3D60A001AEE8D /* BanksListViewController.h */,
+				71265BDA23A3D60A001AEE8D /* BanksListViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -134,10 +151,16 @@
 		71265BA923A0281D001AEE8D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				71265BDC23A429AB001AEE8D /* BaseViewModel.h */,
+				71265BDD23A429AC001AEE8D /* BaseViewModel.m */,
 				71265BC723A16725001AEE8D /* PaymentMethodsViewModel.h */,
 				71265BC823A16725001AEE8D /* PaymentMethodsViewModel.m */,
 				71265BD623A2C6C6001AEE8D /* PaymentMethodCellViewModel.h */,
 				71265BD723A2C6C6001AEE8D /* PaymentMethodCellViewModel.m */,
+				71265BE223A42DAF001AEE8D /* BanksViewModel.h */,
+				71265BE323A42DB0001AEE8D /* BanksViewModel.m */,
+				71265BE523A42DEE001AEE8D /* BankCellViewModel.h */,
+				71265BE623A42DEE001AEE8D /* BankCellViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,6 +236,8 @@
 			children = (
 				71265BD323A2B950001AEE8D /* PaymentMethodTableViewCell.h */,
 				71265BD423A2B950001AEE8D /* PaymentMethodTableViewCell.m */,
+				71265BDF23A42C0B001AEE8D /* BankTableViewCell.h */,
+				71265BE023A42C0B001AEE8D /* BankTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,17 +375,22 @@
 			files = (
 				71265BD523A2B950001AEE8D /* PaymentMethodTableViewCell.m in Sources */,
 				71265BB723A03861001AEE8D /* BaseJSONModel.m in Sources */,
+				71265BE423A42DB0001AEE8D /* BanksViewModel.m in Sources */,
 				71265BD823A2C6C6001AEE8D /* PaymentMethodCellViewModel.m in Sources */,
 				71265B97239FFE66001AEE8D /* ViewController.m in Sources */,
 				71265BBA23A039CF001AEE8D /* CardIssuerModel.m in Sources */,
 				71265BCC23A16BF8001AEE8D /* PaymentMethodsViewController.m in Sources */,
 				71265BC023A04CE8001AEE8D /* InstallmentModel.m in Sources */,
+				71265BDB23A3D60A001AEE8D /* BanksListViewController.m in Sources */,
 				71265BCF23A1B28F001AEE8D /* Constants.m in Sources */,
 				71265BC323A12FEB001AEE8D /* SettingModel.m in Sources */,
 				71265B91239FFE66001AEE8D /* AppDelegate.m in Sources */,
 				71265BA2239FFE69001AEE8D /* main.m in Sources */,
 				71265BC623A1355C001AEE8D /* PayerCostsModel.m in Sources */,
+				71265BDE23A429AC001AEE8D /* BaseViewModel.m in Sources */,
+				71265BE123A42C0B001AEE8D /* BankTableViewCell.m in Sources */,
 				71265B94239FFE66001AEE8D /* SceneDelegate.m in Sources */,
+				71265BE723A42DEE001AEE8D /* BankCellViewModel.m in Sources */,
 				71265BB423A0339A001AEE8D /* APIManager.m in Sources */,
 				71265BC923A16725001AEE8D /* PaymentMethodsViewModel.m in Sources */,
 				71265BBD23A04373001AEE8D /* PaymentMethodModel.m in Sources */,

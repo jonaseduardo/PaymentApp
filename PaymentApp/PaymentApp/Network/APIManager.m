@@ -9,14 +9,11 @@
 #import "APIManager.h"
 #import "AFHTTPSessionManager.h"
 #import "PaymentMethodModel.h"
+#import "CardIssuerModel.h"
 
 static NSString * const BASE_URL = @"https://api.mercadopago.com/v1/";
 
 @implementation APIManager
-
-//- (void)doRequest:(NSString *)methodName {
-//    [self doRequest:methodName parameters:nil];
-//}
 
 - (void)doRequest:(NSString *)methodName parameters:(NSDictionary *)parameters response:(void (^)(NSMutableArray * _Nullable, NSError * _Nullable))response {
     
@@ -27,10 +24,21 @@ static NSString * const BASE_URL = @"https://api.mercadopago.com/v1/";
         NSLog(@"JSON: %@", responseObject);
 
         if ([responseObject isKindOfClass:[NSArray class]]) {
-            NSMutableArray *paymentMethods = [PaymentMethodModel arrayOfModelsFromDictionaries:responseObject error:nil];
-            NSLog(@"JSON: %@", paymentMethods);
             
-            response(paymentMethods, nil);
+            if ([methodName isEqualToString:@"payment_methods"]) {
+                
+                NSMutableArray *paymentMethods = [PaymentMethodModel arrayOfModelsFromDictionaries:responseObject error:nil];
+                NSLog(@"JSON: %@", paymentMethods);
+                
+                response(paymentMethods, nil);
+                
+            }else if ([methodName isEqualToString:@"payment_methods/card_issuers"]) {
+                
+                NSMutableArray *banks = [CardIssuerModel arrayOfModelsFromDictionaries:responseObject error:nil];
+                NSLog(@"JSON: %@", banks);
+                
+                response(banks, nil);
+            }
         }
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);

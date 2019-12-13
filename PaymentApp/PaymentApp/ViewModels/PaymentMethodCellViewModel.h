@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseViewModel.h"
 #import "PaymentMethodModel.h"
 
-@interface PaymentMethodCellViewModel : NSObject
+@interface PaymentMethodCellViewModel : BaseViewModel
 
-// Data
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *paymentType;
 @property (nonatomic, strong) NSString *urlImage;
