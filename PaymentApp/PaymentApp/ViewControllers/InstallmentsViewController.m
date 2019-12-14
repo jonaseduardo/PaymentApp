@@ -1,32 +1,31 @@
 //
-//  BanksListViewController.m
+//  InstallmentsViewController.m
 //  PaymentApp
 //
-//  Created by Jonathan Garcia on 13/12/2019.
+//  Created by Jonathan Garcia on 14/12/2019.
 //  Copyright © 2019 Jonathan. All rights reserved.
 //
 
-#import "BanksListViewController.h"
-#import "BanksViewModel.h"
-#import "BankTableViewCell.h"
-#import "BankCellViewModel.h"
-#import "UIImageView+AFNetworking.h"
+#import "InstallmentsViewController.h"
+#import "InstallmentsViewModel.h"
+#import "InstallmentTableViewCell.h"
+#import "InstallmentCellViewModel.h"
 
-@interface BanksListViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface InstallmentsViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation BanksListViewController
+@implementation InstallmentsViewController
 
 #pragma mark - Getters/Setters
 
-- (BanksViewModel *)banksViewModel {
-    if (_banksViewModel == nil) {
-        _banksViewModel = [BanksViewModel new];
+- (InstallmentsViewModel *)installmentsViewModel {
+    if (_installmentsViewModel == nil) {
+        _installmentsViewModel = [InstallmentsViewModel new];
     }
-    return _banksViewModel;
+    return _installmentsViewModel;
 }
 
 #pragma mark - View lyfeCycle
@@ -36,7 +35,7 @@
     
     [self configViews];
     [self bindViewModel];
-    [self getBanks];
+    [self getInstallments];
 }
 
 #pragma mark - Bindings
@@ -44,32 +43,31 @@
 - (void)bindViewModel {
     
     __weak UITableView *weakSelfTableView = self.tableView;
-    self.banksViewModel.reloadTableView = ^(){
+    self.installmentsViewModel.reloadTableView = ^(){
         [weakSelfTableView reloadData];
     };
     
-    self.banksViewModel.error = ^(NSString * _Nullable message){
+    self.installmentsViewModel.error = ^(NSString * _Nullable message){
         // retry
     };
 }
 
 #pragma mark - Custom Methods
 
-- (void)getBanks {
+- (void)getInstallments {
     
-    self.banksViewModel.paymentMethodId = @"visa";
-    [self.banksViewModel getBanks];
+    [self.installmentsViewModel getInstallments];
 }
 
 - (void)configViews {
 
-    self.title = @"Bancos";
+    self.title = @"Cuotas";
 }
 
 #pragma mark - UITableView DataSource & Delegate
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.banksViewModel.numberOfCells;
+    return self.installmentsViewModel.numberOfCells;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -78,12 +76,12 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    BankTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BankTableViewCell"];
+    InstallmentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"InstallmentTableViewCell"];
     
-    BankCellViewModel *viewModel = [self.banksViewModel getCellViewModel:indexPath.row];
+    InstallmentCellViewModel *viewModel = [self.installmentsViewModel getCellViewModel:indexPath.row];
 
-    [cell.bankImageView setImageWithURL:[NSURL URLWithString:viewModel.urlImage]];
-    cell.nameLabel.text = viewModel.name;
+    cell.cuotaLabel.text = viewModel.cuota;
+    cell.cftLabel.text = viewModel.cft;
     
     return cell;
 }
@@ -97,5 +95,6 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 }
+
 
 @end

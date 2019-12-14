@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		71265B91239FFE66001AEE8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265B90239FFE66001AEE8D /* AppDelegate.m */; };
 		71265B94239FFE66001AEE8D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265B93239FFE66001AEE8D /* SceneDelegate.m */; };
-		71265B97239FFE66001AEE8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265B96239FFE66001AEE8D /* ViewController.m */; };
 		71265B9A239FFE66001AEE8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71265B98239FFE66001AEE8D /* Main.storyboard */; };
 		71265B9C239FFE69001AEE8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71265B9B239FFE69001AEE8D /* Assets.xcassets */; };
 		71265B9F239FFE69001AEE8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71265B9D239FFE69001AEE8D /* LaunchScreen.storyboard */; };
@@ -26,11 +25,18 @@
 		71265BCF23A1B28F001AEE8D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BCE23A1B28F001AEE8D /* Constants.m */; };
 		71265BD523A2B950001AEE8D /* PaymentMethodTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BD423A2B950001AEE8D /* PaymentMethodTableViewCell.m */; };
 		71265BD823A2C6C6001AEE8D /* PaymentMethodCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BD723A2C6C6001AEE8D /* PaymentMethodCellViewModel.m */; };
-		71265BDB23A3D60A001AEE8D /* BanksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BDA23A3D60A001AEE8D /* BanksListViewController.m */; };
 		71265BDE23A429AC001AEE8D /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BDD23A429AC001AEE8D /* BaseViewModel.m */; };
 		71265BE123A42C0B001AEE8D /* BankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BE023A42C0B001AEE8D /* BankTableViewCell.m */; };
 		71265BE423A42DB0001AEE8D /* BanksViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BE323A42DB0001AEE8D /* BanksViewModel.m */; };
 		71265BE723A42DEE001AEE8D /* BankCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BE623A42DEE001AEE8D /* BankCellViewModel.m */; };
+		71265BEA23A449C3001AEE8D /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265BE923A449C3001AEE8D /* PaymentViewController.m */; };
+		71BBB33723A54F980090EFB6 /* BanksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB33623A54F980090EFB6 /* BanksViewController.m */; };
+		71BBB33A23A550D70090EFB6 /* InstallmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB33923A550D70090EFB6 /* InstallmentsViewController.m */; };
+		71BBB33D23A5510E0090EFB6 /* InstallmentsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB33C23A5510E0090EFB6 /* InstallmentsViewModel.m */; };
+		71BBB34023A5512B0090EFB6 /* InstallmentCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB33F23A5512B0090EFB6 /* InstallmentCellViewModel.m */; };
+		71BBB34323A551540090EFB6 /* InstallmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34223A551540090EFB6 /* InstallmentTableViewCell.m */; };
+		71BBB34623A5712E0090EFB6 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34523A5712E0090EFB6 /* SummaryViewController.m */; };
+		71BBB34923A574350090EFB6 /* SummaryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34823A574350090EFB6 /* SummaryViewModel.m */; };
 		C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +49,6 @@
 		71265B90239FFE66001AEE8D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		71265B92239FFE66001AEE8D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		71265B93239FFE66001AEE8D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		71265B95239FFE66001AEE8D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		71265B96239FFE66001AEE8D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		71265B99239FFE66001AEE8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71265B9B239FFE69001AEE8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71265B9E239FFE69001AEE8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,8 +79,7 @@
 		71265BD423A2B950001AEE8D /* PaymentMethodTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodTableViewCell.m; sourceTree = "<group>"; };
 		71265BD623A2C6C6001AEE8D /* PaymentMethodCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentMethodCellViewModel.h; sourceTree = "<group>"; };
 		71265BD723A2C6C6001AEE8D /* PaymentMethodCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodCellViewModel.m; sourceTree = "<group>"; };
-		71265BD923A3D60A001AEE8D /* BanksListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanksListViewController.h; sourceTree = "<group>"; };
-		71265BDA23A3D60A001AEE8D /* BanksListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BanksListViewController.m; sourceTree = "<group>"; };
+		71265BD923A3D60A001AEE8D /* BanksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanksViewController.h; sourceTree = "<group>"; };
 		71265BDC23A429AB001AEE8D /* BaseViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
 		71265BDD23A429AC001AEE8D /* BaseViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
 		71265BDF23A42C0B001AEE8D /* BankTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankTableViewCell.h; sourceTree = "<group>"; };
@@ -85,6 +88,21 @@
 		71265BE323A42DB0001AEE8D /* BanksViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BanksViewModel.m; sourceTree = "<group>"; };
 		71265BE523A42DEE001AEE8D /* BankCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankCellViewModel.h; sourceTree = "<group>"; };
 		71265BE623A42DEE001AEE8D /* BankCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankCellViewModel.m; sourceTree = "<group>"; };
+		71265BE823A449C3001AEE8D /* PaymentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
+		71265BE923A449C3001AEE8D /* PaymentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		71BBB33623A54F980090EFB6 /* BanksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BanksViewController.m; sourceTree = "<group>"; };
+		71BBB33823A550D70090EFB6 /* InstallmentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstallmentsViewController.h; sourceTree = "<group>"; };
+		71BBB33923A550D70090EFB6 /* InstallmentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstallmentsViewController.m; sourceTree = "<group>"; };
+		71BBB33B23A5510E0090EFB6 /* InstallmentsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstallmentsViewModel.h; sourceTree = "<group>"; };
+		71BBB33C23A5510E0090EFB6 /* InstallmentsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstallmentsViewModel.m; sourceTree = "<group>"; };
+		71BBB33E23A5512B0090EFB6 /* InstallmentCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstallmentCellViewModel.h; sourceTree = "<group>"; };
+		71BBB33F23A5512B0090EFB6 /* InstallmentCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstallmentCellViewModel.m; sourceTree = "<group>"; };
+		71BBB34123A551540090EFB6 /* InstallmentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstallmentTableViewCell.h; sourceTree = "<group>"; };
+		71BBB34223A551540090EFB6 /* InstallmentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstallmentTableViewCell.m; sourceTree = "<group>"; };
+		71BBB34423A5712E0090EFB6 /* SummaryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
+		71BBB34523A5712E0090EFB6 /* SummaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
+		71BBB34723A574350090EFB6 /* SummaryViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SummaryViewModel.h; sourceTree = "<group>"; };
+		71BBB34823A574350090EFB6 /* SummaryViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SummaryViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,12 +156,16 @@
 			children = (
 				71265B92239FFE66001AEE8D /* SceneDelegate.h */,
 				71265B93239FFE66001AEE8D /* SceneDelegate.m */,
-				71265B95239FFE66001AEE8D /* ViewController.h */,
-				71265B96239FFE66001AEE8D /* ViewController.m */,
+				71265BE823A449C3001AEE8D /* PaymentViewController.h */,
+				71265BE923A449C3001AEE8D /* PaymentViewController.m */,
 				71265BCA23A16BF8001AEE8D /* PaymentMethodsViewController.h */,
 				71265BCB23A16BF8001AEE8D /* PaymentMethodsViewController.m */,
-				71265BD923A3D60A001AEE8D /* BanksListViewController.h */,
-				71265BDA23A3D60A001AEE8D /* BanksListViewController.m */,
+				71265BD923A3D60A001AEE8D /* BanksViewController.h */,
+				71BBB33623A54F980090EFB6 /* BanksViewController.m */,
+				71BBB33823A550D70090EFB6 /* InstallmentsViewController.h */,
+				71BBB33923A550D70090EFB6 /* InstallmentsViewController.m */,
+				71BBB34423A5712E0090EFB6 /* SummaryViewController.h */,
+				71BBB34523A5712E0090EFB6 /* SummaryViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +183,12 @@
 				71265BE323A42DB0001AEE8D /* BanksViewModel.m */,
 				71265BE523A42DEE001AEE8D /* BankCellViewModel.h */,
 				71265BE623A42DEE001AEE8D /* BankCellViewModel.m */,
+				71BBB33B23A5510E0090EFB6 /* InstallmentsViewModel.h */,
+				71BBB33C23A5510E0090EFB6 /* InstallmentsViewModel.m */,
+				71BBB33E23A5512B0090EFB6 /* InstallmentCellViewModel.h */,
+				71BBB33F23A5512B0090EFB6 /* InstallmentCellViewModel.m */,
+				71BBB34723A574350090EFB6 /* SummaryViewModel.h */,
+				71BBB34823A574350090EFB6 /* SummaryViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -238,6 +266,8 @@
 				71265BD423A2B950001AEE8D /* PaymentMethodTableViewCell.m */,
 				71265BDF23A42C0B001AEE8D /* BankTableViewCell.h */,
 				71265BE023A42C0B001AEE8D /* BankTableViewCell.m */,
+				71BBB34123A551540090EFB6 /* InstallmentTableViewCell.h */,
+				71BBB34223A551540090EFB6 /* InstallmentTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -376,22 +406,28 @@
 				71265BD523A2B950001AEE8D /* PaymentMethodTableViewCell.m in Sources */,
 				71265BB723A03861001AEE8D /* BaseJSONModel.m in Sources */,
 				71265BE423A42DB0001AEE8D /* BanksViewModel.m in Sources */,
+				71265BEA23A449C3001AEE8D /* PaymentViewController.m in Sources */,
+				71BBB33D23A5510E0090EFB6 /* InstallmentsViewModel.m in Sources */,
 				71265BD823A2C6C6001AEE8D /* PaymentMethodCellViewModel.m in Sources */,
-				71265B97239FFE66001AEE8D /* ViewController.m in Sources */,
+				71BBB34023A5512B0090EFB6 /* InstallmentCellViewModel.m in Sources */,
 				71265BBA23A039CF001AEE8D /* CardIssuerModel.m in Sources */,
+				71BBB33A23A550D70090EFB6 /* InstallmentsViewController.m in Sources */,
 				71265BCC23A16BF8001AEE8D /* PaymentMethodsViewController.m in Sources */,
 				71265BC023A04CE8001AEE8D /* InstallmentModel.m in Sources */,
-				71265BDB23A3D60A001AEE8D /* BanksListViewController.m in Sources */,
 				71265BCF23A1B28F001AEE8D /* Constants.m in Sources */,
 				71265BC323A12FEB001AEE8D /* SettingModel.m in Sources */,
 				71265B91239FFE66001AEE8D /* AppDelegate.m in Sources */,
 				71265BA2239FFE69001AEE8D /* main.m in Sources */,
 				71265BC623A1355C001AEE8D /* PayerCostsModel.m in Sources */,
+				71BBB34923A574350090EFB6 /* SummaryViewModel.m in Sources */,
+				71BBB34323A551540090EFB6 /* InstallmentTableViewCell.m in Sources */,
+				71BBB33723A54F980090EFB6 /* BanksViewController.m in Sources */,
 				71265BDE23A429AC001AEE8D /* BaseViewModel.m in Sources */,
 				71265BE123A42C0B001AEE8D /* BankTableViewCell.m in Sources */,
 				71265B94239FFE66001AEE8D /* SceneDelegate.m in Sources */,
 				71265BE723A42DEE001AEE8D /* BankCellViewModel.m in Sources */,
 				71265BB423A0339A001AEE8D /* APIManager.m in Sources */,
+				71BBB34623A5712E0090EFB6 /* SummaryViewController.m in Sources */,
 				71265BC923A16725001AEE8D /* PaymentMethodsViewModel.m in Sources */,
 				71265BBD23A04373001AEE8D /* PaymentMethodModel.m in Sources */,
 			);

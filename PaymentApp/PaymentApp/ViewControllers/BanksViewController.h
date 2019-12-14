@@ -1,5 +1,5 @@
 //
-//  BanksListViewController.h
+//  BanksViewController.h
 //  PaymentApp
 //
 //  Created by Jonathan Garcia on 13/12/2019.
@@ -10,7 +10,7 @@
 
 @class BanksViewModel;
 
-@interface BanksListViewController : UIViewController
+@interface BanksViewController : UIViewController
 
 @property (strong, nonatomic) BanksViewModel *banksViewModel;
 

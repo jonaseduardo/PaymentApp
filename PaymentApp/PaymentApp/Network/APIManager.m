@@ -10,6 +10,7 @@
 #import "AFHTTPSessionManager.h"
 #import "PaymentMethodModel.h"
 #import "CardIssuerModel.h"
+#import "InstallmentModel.h"
 
 static NSString * const BASE_URL = @"https://api.mercadopago.com/v1/";
 
@@ -38,7 +39,15 @@ static NSString * const BASE_URL = @"https://api.mercadopago.com/v1/";
                 NSLog(@"JSON: %@", banks);
                 
                 response(banks, nil);
+                
+            }else if ([methodName isEqualToString:@"payment_methods/installments"]) {
+                
+                NSMutableArray *installments = [InstallmentModel arrayOfModelsFromDictionaries:responseObject error:nil];
+                NSLog(@"JSON: %@", installments);
+                
+                response(installments, nil);
             }
+            
         }
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
