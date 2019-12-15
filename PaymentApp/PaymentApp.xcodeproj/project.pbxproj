@@ -37,6 +37,7 @@
 		71BBB34323A551540090EFB6 /* InstallmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34223A551540090EFB6 /* InstallmentTableViewCell.m */; };
 		71BBB34623A5712E0090EFB6 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34523A5712E0090EFB6 /* SummaryViewController.m */; };
 		71BBB34923A574350090EFB6 /* SummaryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34823A574350090EFB6 /* SummaryViewModel.m */; };
+		71BBB34C23A6D12B0090EFB6 /* BasePaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34B23A6D12B0090EFB6 /* BasePaymentViewController.m */; };
 		C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,8 @@
 		71BBB34523A5712E0090EFB6 /* SummaryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
 		71BBB34723A574350090EFB6 /* SummaryViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SummaryViewModel.h; sourceTree = "<group>"; };
 		71BBB34823A574350090EFB6 /* SummaryViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SummaryViewModel.m; sourceTree = "<group>"; };
+		71BBB34A23A6D12B0090EFB6 /* BasePaymentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePaymentViewController.h; sourceTree = "<group>"; };
+		71BBB34B23A6D12B0090EFB6 /* BasePaymentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePaymentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 			children = (
 				71265B92239FFE66001AEE8D /* SceneDelegate.h */,
 				71265B93239FFE66001AEE8D /* SceneDelegate.m */,
+				71BBB34A23A6D12B0090EFB6 /* BasePaymentViewController.h */,
+				71BBB34B23A6D12B0090EFB6 /* BasePaymentViewController.m */,
 				71265BE823A449C3001AEE8D /* PaymentViewController.h */,
 				71265BE923A449C3001AEE8D /* PaymentViewController.m */,
 				71265BCA23A16BF8001AEE8D /* PaymentMethodsViewController.h */,
@@ -425,6 +430,7 @@
 				71265BDE23A429AC001AEE8D /* BaseViewModel.m in Sources */,
 				71265BE123A42C0B001AEE8D /* BankTableViewCell.m in Sources */,
 				71265B94239FFE66001AEE8D /* SceneDelegate.m in Sources */,
+				71BBB34C23A6D12B0090EFB6 /* BasePaymentViewController.m in Sources */,
 				71265BE723A42DEE001AEE8D /* BankCellViewModel.m in Sources */,
 				71265BB423A0339A001AEE8D /* APIManager.m in Sources */,
 				71BBB34623A5712E0090EFB6 /* SummaryViewController.m in Sources */,

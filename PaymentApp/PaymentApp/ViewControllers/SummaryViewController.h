@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BasePaymentViewController.h"
 
 @class SummaryViewModel;
 
-@interface SummaryViewController : UIViewController
+@interface SummaryViewController : BasePaymentViewController
 
 @property (strong, nonatomic) SummaryViewModel *summaryViewModel;
 

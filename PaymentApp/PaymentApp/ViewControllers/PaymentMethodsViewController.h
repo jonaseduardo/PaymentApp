@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BasePaymentViewController.h"
 
 @class PaymentMethodsViewModel;
 
-@interface PaymentMethodsViewController : UIViewController
+@interface PaymentMethodsViewController : BasePaymentViewController
 
 @property (strong, nonatomic) PaymentMethodsViewModel *paymentMethodsViewModel;
 
