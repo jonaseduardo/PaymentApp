@@ -59,11 +59,15 @@ static NSString * const PATH_REQUEST = @"payment_methods/installments";
 
 - (void)getInstallments {
     
+    self.loading(true);
+    
     [self.myAPIManager doRequest:PATH_REQUEST parameters:@{PUBLIC_KEY:PUBLIC_KEY_VALUE,
                                                                               PAYMENT_METHOD_ID:@"visa",
                                                                               AMOUNT:@"200",
                                                                               ISSUER_ID:@"310"
     } response:^(id data, NSError *error) {
+        
+        self.loading(false);
         
         if(!error) {
             

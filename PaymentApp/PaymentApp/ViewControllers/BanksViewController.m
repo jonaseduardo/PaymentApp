@@ -43,6 +43,16 @@
 
 - (void)bindViewModel {
     
+    __weak UIView *weakSelfview = self.view;
+    self.banksViewModel.loading = ^(BOOL loading){
+        
+        if(loading) {
+            [MBProgressHUD showHUDAddedTo:weakSelfview animated:YES];
+        }else {
+            [MBProgressHUD hideHUDForView:weakSelfview animated:NO];
+        }
+    };
+    
     __weak UITableView *weakSelfTableView = self.tableView;
     self.banksViewModel.reloadTableView = ^(){
         [weakSelfTableView reloadData];

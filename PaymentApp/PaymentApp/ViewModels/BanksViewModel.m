@@ -58,9 +58,13 @@ static NSString * const PATH_REQUEST = @"payment_methods/card_issuers";
 
 - (void)getBanks {
     
+    self.loading(true);
+    
     [self.myAPIManager doRequest:PATH_REQUEST parameters:@{PUBLIC_KEY:PUBLIC_KEY_VALUE,
                                                            PAYMENT_METHOD_ID:self.paymentMethodId
     } response:^(id data, NSError *error) {
+        
+        self.loading(false);
         
         if(!error) {
             

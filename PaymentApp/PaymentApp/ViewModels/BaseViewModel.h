@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString * _Nullable title;
 
+@property (nonatomic, copy, nullable) void (^loading)(BOOL);
 @property (nonatomic, copy, nullable) void (^reloadTableView)(void);
 @property (nonatomic, copy, nullable) void (^error)(NSString *_Nullable);
 
