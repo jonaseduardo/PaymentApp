@@ -10,7 +10,7 @@
 
 @interface InstallmentTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *cuotaLabel;
+@property (strong, nonatomic) IBOutlet UILabel *feeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *cftLabel;
 
 @end

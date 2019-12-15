@@ -11,6 +11,8 @@
 #import "BankCellViewModel.h"
 #import "CardIssuerModel.h"
 
+static NSString * const PATH_REQUEST = @"payment_methods/card_issuers";
+
 @interface BanksViewModel ()
 
 @property (nonatomic, strong) APIManager *myAPIManager;
@@ -27,6 +29,10 @@
         self.myAPIManager = [APIManager new];
     }
     return self;
+}
+
+- (NSString *)title {
+    return @"Bancos";
 }
 
 - (NSInteger)numberOfCells {
@@ -52,12 +58,18 @@
 
 - (void)getBanks {
     
-    [self.myAPIManager doRequest:@"payment_methods/card_issuers" parameters:@{@"public_key":PUBLIC_KEY,
-                                                              @"payment_method_id":self.paymentMethodId
-    } response:^(NSMutableArray *data, NSError *error) {
+    [self.myAPIManager doRequest:PATH_REQUEST parameters:@{PUBLIC_KEY:PUBLIC_KEY_VALUE,
+                                                           PAYMENT_METHOD_ID:self.paymentMethodId
+    } response:^(id data, NSError *error) {
         
         if(!error) {
-            [self processBanks:data];
+            
+            NSMutableArray *banks;
+            
+            if ([data isKindOfClass:[NSArray class]]) {
+                banks = [CardIssuerModel arrayOfModelsFromDictionaries:data error:nil];
+            }
+            [self processBanks:banks];
         }else {
             self.error(@"error");
         }

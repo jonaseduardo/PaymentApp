@@ -23,7 +23,7 @@
         
         self.model = model;
         
-        self.cuota = model.recommendedMessage;
+        self.fee = model.recommendedMessage;
         
         for (NSString *str in model.labels) {
             if ([str hasPrefix:@"CFT"]) {

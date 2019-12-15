@@ -62,7 +62,7 @@
 
 - (void)configViews {
 
-    self.title = @"Método de pago";
+    self.title = self.paymentMethodsViewModel.title;
 }
 
 #pragma mark - UITableView DataSource & Delegate
@@ -90,7 +90,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [tableView deselectRowAtIndexPath:indexPath animated:true];
 }
 
 #pragma mark - Navigation

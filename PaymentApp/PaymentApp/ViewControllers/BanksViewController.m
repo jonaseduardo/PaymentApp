@@ -63,7 +63,7 @@
 
 - (void)configViews {
 
-    self.title = @"Bancos";
+    self.title = self.banksViewModel.title;
 }
 
 #pragma mark - UITableView DataSource & Delegate
@@ -89,8 +89,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:true];
+
 }
 
 #pragma mark - Navigation

@@ -13,7 +13,7 @@
 
 - (instancetype)initWithModel:(PayerCostsModel *)model;
 
-@property (nonatomic, strong) NSString *cuota;
+@property (nonatomic, strong) NSString *fee;
 @property (nonatomic, strong) NSString *cft;
 
 @end

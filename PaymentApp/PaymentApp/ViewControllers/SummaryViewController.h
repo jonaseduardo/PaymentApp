@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class SummaryViewModel;
 
 @interface SummaryViewController : UIViewController
 
-@end
+@property (strong, nonatomic) SummaryViewModel *summaryViewModel;
 
-NS_ASSUME_NONNULL_END
+@end

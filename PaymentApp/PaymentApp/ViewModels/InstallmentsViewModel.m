@@ -12,6 +12,8 @@
 #import "InstallmentModel.h"
 #import "PayerCostsModel.h"
 
+static NSString * const PATH_REQUEST = @"payment_methods/installments";
+
 @interface InstallmentsViewModel ()
 
 @property (nonatomic, strong) APIManager *myAPIManager;
@@ -28,6 +30,10 @@
         self.myAPIManager = [APIManager new];
     }
     return self;
+}
+
+- (NSString *)title {
+    return @"Cuotas";
 }
 
 - (NSInteger)numberOfCells {
@@ -53,14 +59,20 @@
 
 - (void)getInstallments {
     
-    [self.myAPIManager doRequest:@"payment_methods/installments" parameters:@{@"public_key":PUBLIC_KEY,
-                                                              @"payment_method_id":@"visa",
-                                                                              @"amount":@"200",
-                                                                              @"issuer.id":@"310"
-    } response:^(NSMutableArray *data, NSError *error) {
+    [self.myAPIManager doRequest:PATH_REQUEST parameters:@{PUBLIC_KEY:PUBLIC_KEY_VALUE,
+                                                                              PAYMENT_METHOD_ID:@"visa",
+                                                                              AMOUNT:@"200",
+                                                                              ISSUER_ID:@"310"
+    } response:^(id data, NSError *error) {
         
         if(!error) {
-            [self processInstallments:data];
+            
+            NSMutableArray *installments;
+            
+            if ([data isKindOfClass:[NSArray class]]) {
+                installments = [InstallmentModel arrayOfModelsFromDictionaries:data error:nil];
+            }
+            [self processInstallments:installments];
         }else {
             self.error(@"error");
         }

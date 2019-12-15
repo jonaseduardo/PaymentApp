@@ -11,6 +11,8 @@
 #import "PaymentMethodCellViewModel.h"
 #import "PaymentMethodModel.h"
 
+static NSString * const PATH_REQUEST = @"payment_methods";
+
 @interface PaymentMethodsViewModel ()
 
 @property (nonatomic, strong) APIManager *myAPIManager;
@@ -27,6 +29,10 @@
         self.myAPIManager = [APIManager new];
     }
     return self;
+}
+
+- (NSString *)title {
+    return @"Método de pago";
 }
 
 - (NSInteger)numberOfCells {
@@ -52,10 +58,16 @@
 
 - (void)getPaymentMethods {
     
-    [self.myAPIManager doRequest:@"payment_methods" parameters:@{@"public_key":PUBLIC_KEY} response:^(NSMutableArray *data, NSError *error) {
+    [self.myAPIManager doRequest:PATH_REQUEST parameters:@{PUBLIC_KEY:PUBLIC_KEY_VALUE} response:^(id data, NSError *error) {
         
         if(!error) {
-            [self processPaymentMethods:data];
+            
+            NSMutableArray *paymentMethods;
+            
+            if ([data isKindOfClass:[NSArray class]]) {
+                paymentMethods = [PaymentMethodModel arrayOfModelsFromDictionaries:data error:nil];
+            }
+            [self processPaymentMethods:paymentMethods];
         }else {
             self.error(@"error");
         }

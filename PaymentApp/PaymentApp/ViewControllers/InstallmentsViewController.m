@@ -61,7 +61,7 @@
 
 - (void)configViews {
 
-    self.title = @"Cuotas";
+    self.title = self.installmentsViewModel.title;
 }
 
 #pragma mark - UITableView DataSource & Delegate
@@ -80,15 +80,14 @@
     
     InstallmentCellViewModel *viewModel = [self.installmentsViewModel getCellViewModel:indexPath.row];
 
-    cell.cuotaLabel.text = viewModel.cuota;
+    cell.feeLabel.text = viewModel.fee;
     cell.cftLabel.text = viewModel.cft;
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:true];
+
 }
 
 #pragma mark - Navigation

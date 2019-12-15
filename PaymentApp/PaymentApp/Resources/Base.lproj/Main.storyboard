@@ -131,14 +131,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cuota" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxg-41-iHm">
-                                                    <rect key="frame" x="16" y="16" width="382" height="19"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="16" y="16" width="382" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="cft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-y5-1dM">
-                                                    <rect key="frame" x="16" y="51" width="382" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="16" y="52.5" width="382" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -155,7 +155,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cftLabel" destination="1ac-y5-1dM" id="2CQ-e0-5Ai"/>
-                                            <outlet property="cuotaLabel" destination="yxg-41-iHm" id="J4V-la-L6z"/>
+                                            <outlet property="feeLabel" destination="yxg-41-iHm" id="J4V-la-L6z"/>
                                             <segue destination="9Wm-zw-ilk" kind="show" id="Gjb-Mt-n9k"/>
                                         </connections>
                                     </tableViewCell>
@@ -243,6 +243,12 @@
                         <viewLayoutGuide key="safeArea" id="909-2q-0PB"/>
                     </view>
                     <navigationItem key="navigationItem" id="7dp-C2-K6e"/>
+                    <connections>
+                        <outlet property="amountLabel" destination="W9r-zj-Y7I" id="uRH-RL-4Vs"/>
+                        <outlet property="bankLabel" destination="tDq-ab-aHq" id="ULP-lC-4cQ"/>
+                        <outlet property="feeLabel" destination="9Aa-kl-Gse" id="ExR-DP-Bd2"/>
+                        <outlet property="paymentMethodLabel" destination="rtE-NM-sgw" id="faX-Zt-p6m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jWd-1m-eZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

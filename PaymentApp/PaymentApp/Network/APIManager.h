@@ -10,6 +10,6 @@
 
 @interface APIManager : NSObject
 
-- (void)doRequest:(NSString *)methodName parameters:(NSDictionary *)parameters response:(void (^)(NSMutableArray * _Nullable, NSError * _Nullable))response;
+- (void)doRequest:(NSString *)path parameters:(NSDictionary *)parameters response:(void (^)(id _Nullable, NSError * _Nullable))response;
 
 @end

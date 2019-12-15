@@ -8,10 +8,11 @@
 
 #import "BaseViewModel.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface SummaryViewModel : BaseViewModel
 
-@end
+@property (nonatomic, strong) NSString *amount;
+@property (nonatomic, strong) NSString *paymentMethod;
+@property (nonatomic, strong) NSString *bank;
+@property (nonatomic, strong) NSString *fee;
 
-NS_ASSUME_NONNULL_END
+@end

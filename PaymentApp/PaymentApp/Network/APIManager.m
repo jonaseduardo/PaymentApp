@@ -8,47 +8,21 @@
 
 #import "APIManager.h"
 #import "AFHTTPSessionManager.h"
-#import "PaymentMethodModel.h"
-#import "CardIssuerModel.h"
-#import "InstallmentModel.h"
 
 static NSString * const BASE_URL = @"https://api.mercadopago.com/v1/";
 
 @implementation APIManager
 
-- (void)doRequest:(NSString *)methodName parameters:(NSDictionary *)parameters response:(void (^)(NSMutableArray * _Nullable, NSError * _Nullable))response {
+- (void)doRequest:(NSString *)path parameters:(NSDictionary *)parameters response:(void (^)(id _Nullable, NSError * _Nullable))response {
     
-    NSString *urlString = [NSString stringWithFormat:@"%@%@", BASE_URL, methodName];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@", BASE_URL, path];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:urlString parameters:parameters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
-
-        if ([responseObject isKindOfClass:[NSArray class]]) {
-            
-            if ([methodName isEqualToString:@"payment_methods"]) {
+       
+        response(responseObject, nil);
                 
-                NSMutableArray *paymentMethods = [PaymentMethodModel arrayOfModelsFromDictionaries:responseObject error:nil];
-                NSLog(@"JSON: %@", paymentMethods);
-                
-                response(paymentMethods, nil);
-                
-            }else if ([methodName isEqualToString:@"payment_methods/card_issuers"]) {
-                
-                NSMutableArray *banks = [CardIssuerModel arrayOfModelsFromDictionaries:responseObject error:nil];
-                NSLog(@"JSON: %@", banks);
-                
-                response(banks, nil);
-                
-            }else if ([methodName isEqualToString:@"payment_methods/installments"]) {
-                
-                NSMutableArray *installments = [InstallmentModel arrayOfModelsFromDictionaries:responseObject error:nil];
-                NSLog(@"JSON: %@", installments);
-                
-                response(installments, nil);
-            }
-            
-        }
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
         
