@@ -15,13 +15,46 @@
                     <view key="view" contentMode="scaleToFill" id="8w5-94-vJK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingrese el monto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qej-TK-M81">
+                                <rect key="frame" x="16" y="104" width="382" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zw1-qU-Rp1">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="2SD-4x-xaI" kind="show" id="LgH-7z-BT4"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="382" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="aUH-ZI-QHZ" customClass="AmountView">
+                                <rect key="frame" x="16" y="151" width="382" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mmU-Ya-m9w" firstAttribute="trailing" secondItem="aUH-ZI-QHZ" secondAttribute="trailing" constant="16" id="90s-NZ-xgc"/>
+                            <constraint firstItem="mmU-Ya-m9w" firstAttribute="trailing" secondItem="qej-TK-M81" secondAttribute="trailing" constant="16" id="Acy-h0-T2t"/>
+                            <constraint firstItem="zw1-qU-Rp1" firstAttribute="centerY" secondItem="8w5-94-vJK" secondAttribute="centerY" id="EK3-35-jZW"/>
+                            <constraint firstItem="aUH-ZI-QHZ" firstAttribute="leading" secondItem="mmU-Ya-m9w" secondAttribute="leading" constant="16" id="KhE-8u-YEb"/>
+                            <constraint firstItem="aUH-ZI-QHZ" firstAttribute="top" secondItem="qej-TK-M81" secondAttribute="bottom" constant="24" id="OdZ-4J-OhN"/>
+                            <constraint firstItem="zw1-qU-Rp1" firstAttribute="centerX" secondItem="8w5-94-vJK" secondAttribute="centerX" id="bV6-C8-aPI"/>
+                            <constraint firstItem="qej-TK-M81" firstAttribute="top" secondItem="mmU-Ya-m9w" secondAttribute="top" constant="16" id="nU6-hp-tm0"/>
+                            <constraint firstItem="qej-TK-M81" firstAttribute="leading" secondItem="mmU-Ya-m9w" secondAttribute="leading" constant="16" id="qjj-Rk-A0w"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mmU-Ya-m9w"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SQq-gd-UvR"/>
+                    <connections>
+                        <outlet property="amountView" destination="aUH-ZI-QHZ" id="dgt-CZ-oE9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezt-qj-0F7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="800"/>
+            <point key="canvasLocation" x="155" y="100"/>
         </scene>
         <!--Banks View Controller-->
         <scene sceneID="TaO-hv-oFz">
@@ -360,12 +393,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2SD-4x-xaI" kind="relationship" relationship="rootViewController" id="wZC-Jy-DGR"/>
+                        <segue destination="f09-Zr-Y1W" kind="relationship" relationship="rootViewController" id="BrM-kx-uY9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7c-nT-yeR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+            <point key="canvasLocation" x="-775" y="100"/>
         </scene>
     </scenes>
 </document>

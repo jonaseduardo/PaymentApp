@@ -7,8 +7,11 @@
 //
 
 #import "PaymentViewController.h"
+#import "AmountView.h"
 
-@interface PaymentViewController ()
+@interface PaymentViewController () <AmountViewDelegate>
+
+@property (strong, nonatomic) IBOutlet AmountView *amountView;
 
 @end
 
@@ -16,6 +19,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self configViews];
+}
+
+#pragma mark - Custom Methods
+
+- (void)configViews {
+
+    self.title = @"Monto";
+    
+    [self.amountView setDelegate:self];
+}
+
+#pragma mark - AmountViewDelegate methods
+
+- (void)amountChanged:(AmountView *)sender amount:(NSString *)amount {
+    
 }
 
 #pragma mark - Navigation

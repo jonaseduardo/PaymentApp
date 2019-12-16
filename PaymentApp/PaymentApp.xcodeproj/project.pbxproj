@@ -38,6 +38,9 @@
 		71BBB34623A5712E0090EFB6 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34523A5712E0090EFB6 /* SummaryViewController.m */; };
 		71BBB34923A574350090EFB6 /* SummaryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34823A574350090EFB6 /* SummaryViewModel.m */; };
 		71BBB34C23A6D12B0090EFB6 /* BasePaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34B23A6D12B0090EFB6 /* BasePaymentViewController.m */; };
+		71BBB34F23A705FD0090EFB6 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34E23A705FD0090EFB6 /* NSString+Utils.m */; };
+		71BBB35223A7C9A70090EFB6 /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB35123A7C9A70090EFB6 /* AmountView.m */; };
+		71BBB35423A7C9C40090EFB6 /* AmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71BBB35323A7C9C40090EFB6 /* AmountView.xib */; };
 		C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +109,11 @@
 		71BBB34823A574350090EFB6 /* SummaryViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SummaryViewModel.m; sourceTree = "<group>"; };
 		71BBB34A23A6D12B0090EFB6 /* BasePaymentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePaymentViewController.h; sourceTree = "<group>"; };
 		71BBB34B23A6D12B0090EFB6 /* BasePaymentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePaymentViewController.m; sourceTree = "<group>"; };
+		71BBB34D23A705FD0090EFB6 /* NSString+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		71BBB34E23A705FD0090EFB6 /* NSString+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		71BBB35023A7C9A70090EFB6 /* AmountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmountView.h; sourceTree = "<group>"; };
+		71BBB35123A7C9A70090EFB6 /* AmountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmountView.m; sourceTree = "<group>"; };
+		71BBB35323A7C9C40090EFB6 /* AmountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmountView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +230,8 @@
 			children = (
 				71265BCD23A1B28F001AEE8D /* Constants.h */,
 				71265BCE23A1B28F001AEE8D /* Constants.m */,
+				71BBB34D23A705FD0090EFB6 /* NSString+Utils.h */,
+				71BBB34E23A705FD0090EFB6 /* NSString+Utils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 			children = (
 				71265B98239FFE66001AEE8D /* Main.storyboard */,
 				71265B9D239FFE69001AEE8D /* LaunchScreen.storyboard */,
+				71BBB35323A7C9C40090EFB6 /* AmountView.xib */,
 				71265B9B239FFE69001AEE8D /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -273,6 +284,8 @@
 				71265BE023A42C0B001AEE8D /* BankTableViewCell.m */,
 				71BBB34123A551540090EFB6 /* InstallmentTableViewCell.h */,
 				71BBB34223A551540090EFB6 /* InstallmentTableViewCell.m */,
+				71BBB35023A7C9A70090EFB6 /* AmountView.h */,
+				71BBB35123A7C9A70090EFB6 /* AmountView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -355,6 +368,7 @@
 			files = (
 				71265B9F239FFE69001AEE8D /* LaunchScreen.storyboard in Resources */,
 				71265B9C239FFE69001AEE8D /* Assets.xcassets in Resources */,
+				71BBB35423A7C9C40090EFB6 /* AmountView.xib in Resources */,
 				71265B9A239FFE66001AEE8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +429,7 @@
 				71BBB33D23A5510E0090EFB6 /* InstallmentsViewModel.m in Sources */,
 				71265BD823A2C6C6001AEE8D /* PaymentMethodCellViewModel.m in Sources */,
 				71BBB34023A5512B0090EFB6 /* InstallmentCellViewModel.m in Sources */,
+				71BBB34F23A705FD0090EFB6 /* NSString+Utils.m in Sources */,
 				71265BBA23A039CF001AEE8D /* CardIssuerModel.m in Sources */,
 				71BBB33A23A550D70090EFB6 /* InstallmentsViewController.m in Sources */,
 				71265BCC23A16BF8001AEE8D /* PaymentMethodsViewController.m in Sources */,
@@ -433,6 +448,7 @@
 				71BBB34C23A6D12B0090EFB6 /* BasePaymentViewController.m in Sources */,
 				71265BE723A42DEE001AEE8D /* BankCellViewModel.m in Sources */,
 				71265BB423A0339A001AEE8D /* APIManager.m in Sources */,
+				71BBB35223A7C9A70090EFB6 /* AmountView.m in Sources */,
 				71BBB34623A5712E0090EFB6 /* SummaryViewController.m in Sources */,
 				71265BC923A16725001AEE8D /* PaymentMethodsViewModel.m in Sources */,
 				71265BBD23A04373001AEE8D /* PaymentMethodModel.m in Sources */,

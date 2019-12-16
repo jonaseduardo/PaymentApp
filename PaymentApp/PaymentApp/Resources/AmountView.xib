@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AmountView">
+            <connections>
+                <outlet property="amountTextField" destination="vCG-bg-pDJ" id="DE9-20-f6C"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="2oo-ql-SSO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0,00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vCG-bg-pDJ">
+                    <rect key="frame" x="0.0" y="0.0" width="443" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="li8-3i-1ls"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="pdT-by-gLU"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vCG-bg-pDJ" secondAttribute="bottom" id="NEK-YV-42A"/>
+                <constraint firstItem="vCG-bg-pDJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OaN-Uf-m9N"/>
+                <constraint firstAttribute="trailing" secondItem="vCG-bg-pDJ" secondAttribute="trailing" id="PEV-8N-PTf"/>
+                <constraint firstItem="vCG-bg-pDJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zwm-Cm-ZDB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="152.89855072463769" y="-136.27232142857142"/>
+        </view>
+    </objects>
+</document>
