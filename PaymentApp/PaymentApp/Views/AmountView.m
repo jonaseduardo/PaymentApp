@@ -63,6 +63,25 @@ static NSUInteger const MAX_LENGTH = 12;
     [self.amountTextField becomeFirstResponder];
 }
 
+- (void)textFieldResignFirstResponder {
+ 
+    [self.amountTextField resignFirstResponder];
+}
+
+- (NSString *)typedValueToCurrency {
+    
+    NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
+    numberFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_AR"];
+    numberFormatter.numberStyle = kCFNumberFormatterCurrencyStyle;
+    
+    double amount = (double)(typedValue / 100) + (double)((double)(typedValue % 100)/100);
+    NSString * str = [numberFormatter stringFromNumber:[NSNumber numberWithDouble:amount]];
+    str = [str stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
+    
+    return str;
+}
+
+
 #pragma mark - UITextFieldDelegate methods
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -94,19 +113,6 @@ static NSUInteger const MAX_LENGTH = 12;
     [self.delegate amountChanged:self amount:self.amountTextField.text];
     
     return NO;
-}
-
-- (NSString *)typedValueToCurrency {
-    
-    NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
-    numberFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"es_AR"];
-    numberFormatter.numberStyle = kCFNumberFormatterCurrencyStyle;
-    
-    double amount = (double)(typedValue / 100) + (double)((double)(typedValue % 100)/100);
-    NSString * str = [numberFormatter stringFromNumber:[NSNumber numberWithDouble:amount]];
-    str = [str stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
-    
-    return str;
 }
 
 @end

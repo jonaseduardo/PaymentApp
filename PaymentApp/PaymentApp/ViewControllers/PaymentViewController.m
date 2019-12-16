@@ -32,6 +32,12 @@
     [self.amountView setDelegate:self];
 }
 
+#pragma mark - Override Methods
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.amountView textFieldResignFirstResponder];
+}
+
 #pragma mark - AmountViewDelegate methods
 
 - (void)amountChanged:(AmountView *)sender amount:(NSString *)amount {

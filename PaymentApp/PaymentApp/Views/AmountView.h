@@ -21,5 +21,6 @@
 @property (nonatomic, weak) id<AmountViewDelegate> delegate;
 
 - (void)textFieldBecomeFirstResponder;
+- (void)textFieldResignFirstResponder;
 
 @end
