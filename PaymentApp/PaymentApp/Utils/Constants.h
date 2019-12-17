@@ -13,4 +13,5 @@ extern NSString * const PUBLIC_KEY_VALUE;
 extern NSString * const PAYMENT_METHOD_ID;
 extern NSString * const AMOUNT;
 extern NSString * const ISSUER_ID;
+extern NSString * const ZERO;
 

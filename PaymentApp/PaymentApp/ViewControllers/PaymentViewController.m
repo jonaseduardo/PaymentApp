@@ -13,6 +13,7 @@
 @interface PaymentViewController () <AmountViewDelegate>
 
 @property (strong, nonatomic) IBOutlet AmountView *amountView;
+@property (strong, nonatomic) IBOutlet UIButton *continueButton;
 @property (strong, nonatomic) NSString *amount;
 
 @end
@@ -58,6 +59,14 @@
 
 - (void)amountChanged:(AmountView *)sender amount:(NSString *)amount {
     self.amount = [Utils formatAmount:amount];
+    
+    if (![self.amount isEqualToString:ZERO]) {
+        [self.continueButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [self.continueButton setEnabled:YES];
+    }else {
+        [self.continueButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        [self.continueButton setEnabled:NO];
+    }
 }
 
 @end
