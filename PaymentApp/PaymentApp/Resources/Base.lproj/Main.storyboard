@@ -56,6 +56,31 @@
             </objects>
             <point key="canvasLocation" x="155" y="100"/>
         </scene>
+        <!--Error View Controller-->
+        <scene sceneID="III-cj-SBR">
+            <objects>
+                <viewController storyboardIdentifier="ErrorViewController" id="aMz-kd-eIo" customClass="ErrorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8jG-D9-5RO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdD-0P-3OG">
+                                <rect key="frame" x="190" y="433" width="34" height="30"/>
+                                <state key="normal" title="Error"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CdD-0P-3OG" firstAttribute="centerY" secondItem="8jG-D9-5RO" secondAttribute="centerY" id="57I-HK-HhZ"/>
+                            <constraint firstItem="CdD-0P-3OG" firstAttribute="centerX" secondItem="8jG-D9-5RO" secondAttribute="centerX" id="KHe-7C-1br"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MrS-Af-jO9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1M3-mo-ox2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="810"/>
+        </scene>
         <!--Banks View Controller-->
         <scene sceneID="TaO-hv-oFz">
             <objects>

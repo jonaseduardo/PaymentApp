@@ -49,6 +49,7 @@
 		71BBB36C23A813B40090EFB6 /* InstallmentsCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB36B23A813B40090EFB6 /* InstallmentsCoordinator.m */; };
 		71BBB36F23A8161B0090EFB6 /* SummaryCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB36E23A8161B0090EFB6 /* SummaryCoordinator.m */; };
 		71BBB37223A9695D0090EFB6 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB37123A9695D0090EFB6 /* Utils.m */; };
+		71BBB37523A96E3B0090EFB6 /* ErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB37423A96E3B0090EFB6 /* ErrorViewController.m */; };
 		C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +140,8 @@
 		71BBB36E23A8161B0090EFB6 /* SummaryCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SummaryCoordinator.m; sourceTree = "<group>"; };
 		71BBB37023A9695D0090EFB6 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		71BBB37123A9695D0090EFB6 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		71BBB37323A96E3B0090EFB6 /* ErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErrorViewController.h; sourceTree = "<group>"; };
+		71BBB37423A96E3B0090EFB6 /* ErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErrorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +209,8 @@
 				71BBB33923A550D70090EFB6 /* InstallmentsViewController.m */,
 				71BBB34423A5712E0090EFB6 /* SummaryViewController.h */,
 				71BBB34523A5712E0090EFB6 /* SummaryViewController.m */,
+				71BBB37323A96E3B0090EFB6 /* ErrorViewController.h */,
+				71BBB37423A96E3B0090EFB6 /* ErrorViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -513,6 +518,7 @@
 				71265BE123A42C0B001AEE8D /* BankTableViewCell.m in Sources */,
 				71BBB34C23A6D12B0090EFB6 /* BasePaymentViewController.m in Sources */,
 				71265BE723A42DEE001AEE8D /* BankCellViewModel.m in Sources */,
+				71BBB37523A96E3B0090EFB6 /* ErrorViewController.m in Sources */,
 				71265BB423A0339A001AEE8D /* APIManager.m in Sources */,
 				71BBB35223A7C9A70090EFB6 /* AmountView.m in Sources */,
 				71BBB34623A5712E0090EFB6 /* SummaryViewController.m in Sources */,
