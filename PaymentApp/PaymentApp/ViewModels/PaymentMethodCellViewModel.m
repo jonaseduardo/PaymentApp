@@ -36,4 +36,8 @@
     return [str componentsJoinedByString:@" "];
 }
 
+- (NSString *)paymentMethodId {
+    return self.model.id;
+}
+
 @end

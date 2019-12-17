@@ -22,5 +22,6 @@
 
 - (void)textFieldBecomeFirstResponder;
 - (void)textFieldResignFirstResponder;
+- (void)clearAmount;
 
 @end

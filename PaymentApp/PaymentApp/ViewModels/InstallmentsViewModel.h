@@ -15,6 +15,10 @@
 @property (nonatomic, strong) NSArray * _Nullable cellViewModels;
 @property (nonatomic) NSInteger numberOfCells;
 
+@property (nonatomic, strong) NSString * _Nonnull amount;
+@property (nonatomic, strong) NSString * _Nonnull paymentMethodId;
+@property (nonatomic, strong) NSString * _Nonnull issuerId;
+
 - (void)getInstallments;
 - (InstallmentCellViewModel *_Nullable)getCellViewModel:(NSUInteger)index;
 

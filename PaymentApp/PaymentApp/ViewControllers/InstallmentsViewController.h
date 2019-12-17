@@ -10,9 +10,17 @@
 #import "BasePaymentViewController.h"
 
 @class InstallmentsViewModel;
+@class InstallmentCellViewModel;
+
+@protocol InstallmentsViewControllerDelegate
+
+- (void)InstallmentSelected:(InstallmentCellViewModel *)item;
+
+@end
 
 @interface InstallmentsViewController : BasePaymentViewController
 
 @property (strong, nonatomic) InstallmentsViewModel *installmentsViewModel;
+@property (weak, nonatomic) id<InstallmentsViewControllerDelegate> delegate;
 
 @end

@@ -11,9 +11,10 @@
 
 @interface InstallmentCellViewModel : BaseViewModel
 
-- (instancetype)initWithModel:(PayerCostsModel *)model;
-
 @property (nonatomic, strong) NSString *fee;
 @property (nonatomic, strong) NSString *cft;
+
+- (instancetype)initWithModel:(PayerCostsModel *)model;
+
 
 @end

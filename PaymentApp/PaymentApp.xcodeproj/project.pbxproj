@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		71265B91239FFE66001AEE8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265B90239FFE66001AEE8D /* AppDelegate.m */; };
-		71265B94239FFE66001AEE8D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71265B93239FFE66001AEE8D /* SceneDelegate.m */; };
 		71265B9A239FFE66001AEE8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71265B98239FFE66001AEE8D /* Main.storyboard */; };
 		71265B9C239FFE69001AEE8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71265B9B239FFE69001AEE8D /* Assets.xcassets */; };
 		71265B9F239FFE69001AEE8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71265B9D239FFE69001AEE8D /* LaunchScreen.storyboard */; };
@@ -41,6 +40,15 @@
 		71BBB34F23A705FD0090EFB6 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB34E23A705FD0090EFB6 /* NSString+Utils.m */; };
 		71BBB35223A7C9A70090EFB6 /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB35123A7C9A70090EFB6 /* AmountView.m */; };
 		71BBB35423A7C9C40090EFB6 /* AmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71BBB35323A7C9C40090EFB6 /* AmountView.xib */; };
+		71BBB35923A7E68B0090EFB6 /* ApplicationCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB35823A7E68B0090EFB6 /* ApplicationCoordinator.m */; };
+		71BBB35C23A7EAE50090EFB6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB35A23A7EAE50090EFB6 /* SceneDelegate.m */; };
+		71BBB35F23A7F9BC0090EFB6 /* PaymentCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB35E23A7F9BC0090EFB6 /* PaymentCoordinator.m */; };
+		71BBB36223A801CB0090EFB6 /* PaymentMethodsCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB36123A801CB0090EFB6 /* PaymentMethodsCoordinator.m */; };
+		71BBB36623A803F60090EFB6 /* UIViewController+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB36523A803F60090EFB6 /* UIViewController+Create.m */; };
+		71BBB36923A8082A0090EFB6 /* BanksCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB36823A8082A0090EFB6 /* BanksCoordinator.m */; };
+		71BBB36C23A813B40090EFB6 /* InstallmentsCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB36B23A813B40090EFB6 /* InstallmentsCoordinator.m */; };
+		71BBB36F23A8161B0090EFB6 /* SummaryCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB36E23A8161B0090EFB6 /* SummaryCoordinator.m */; };
+		71BBB37223A9695D0090EFB6 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BBB37123A9695D0090EFB6 /* Utils.m */; };
 		C55863B26F3E0619C05B20AA /* Pods_PaymentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32964B1C9A7F3ADC6DE3744C /* Pods_PaymentApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,8 +59,6 @@
 		71265B8C239FFE66001AEE8D /* PaymentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71265B8F239FFE66001AEE8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		71265B90239FFE66001AEE8D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		71265B92239FFE66001AEE8D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		71265B93239FFE66001AEE8D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		71265B99239FFE66001AEE8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71265B9B239FFE69001AEE8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71265B9E239FFE69001AEE8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,6 +120,25 @@
 		71BBB35023A7C9A70090EFB6 /* AmountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmountView.h; sourceTree = "<group>"; };
 		71BBB35123A7C9A70090EFB6 /* AmountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmountView.m; sourceTree = "<group>"; };
 		71BBB35323A7C9C40090EFB6 /* AmountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmountView.xib; sourceTree = "<group>"; };
+		71BBB35623A7E4AB0090EFB6 /* Coordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coordinator.h; sourceTree = "<group>"; };
+		71BBB35723A7E68B0090EFB6 /* ApplicationCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationCoordinator.h; sourceTree = "<group>"; };
+		71BBB35823A7E68B0090EFB6 /* ApplicationCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationCoordinator.m; sourceTree = "<group>"; };
+		71BBB35A23A7EAE50090EFB6 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		71BBB35B23A7EAE50090EFB6 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		71BBB35D23A7F9BC0090EFB6 /* PaymentCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentCoordinator.h; sourceTree = "<group>"; };
+		71BBB35E23A7F9BC0090EFB6 /* PaymentCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentCoordinator.m; sourceTree = "<group>"; };
+		71BBB36023A801CB0090EFB6 /* PaymentMethodsCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentMethodsCoordinator.h; sourceTree = "<group>"; };
+		71BBB36123A801CB0090EFB6 /* PaymentMethodsCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodsCoordinator.m; sourceTree = "<group>"; };
+		71BBB36423A803F60090EFB6 /* UIViewController+Create.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Create.h"; sourceTree = "<group>"; };
+		71BBB36523A803F60090EFB6 /* UIViewController+Create.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Create.m"; sourceTree = "<group>"; };
+		71BBB36723A8082A0090EFB6 /* BanksCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BanksCoordinator.h; sourceTree = "<group>"; };
+		71BBB36823A8082A0090EFB6 /* BanksCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BanksCoordinator.m; sourceTree = "<group>"; };
+		71BBB36A23A813B40090EFB6 /* InstallmentsCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstallmentsCoordinator.h; sourceTree = "<group>"; };
+		71BBB36B23A813B40090EFB6 /* InstallmentsCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstallmentsCoordinator.m; sourceTree = "<group>"; };
+		71BBB36D23A8161B0090EFB6 /* SummaryCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SummaryCoordinator.h; sourceTree = "<group>"; };
+		71BBB36E23A8161B0090EFB6 /* SummaryCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SummaryCoordinator.m; sourceTree = "<group>"; };
+		71BBB37023A9695D0090EFB6 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		71BBB37123A9695D0090EFB6 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,11 +174,13 @@
 		71265B8E239FFE66001AEE8D /* PaymentApp */ = {
 			isa = PBXGroup;
 			children = (
+				71BBB35523A7E32F0090EFB6 /* Navigation */,
 				71265BA823A0280A001AEE8D /* ViewControllers */,
 				71265BA923A0281D001AEE8D /* ViewModels */,
 				71265BD223A2B925001AEE8D /* Views */,
 				71265BAA23A02824001AEE8D /* Models */,
 				71265BAC23A0282F001AEE8D /* Network */,
+				71BBB36323A803C80090EFB6 /* Categories */,
 				71265BAB23A02829001AEE8D /* Utils */,
 				71265BAD23A02842001AEE8D /* Resources */,
 				71265BAE23A0288E001AEE8D /* Supporting Files */,
@@ -165,8 +192,8 @@
 		71265BA823A0280A001AEE8D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				71265B92239FFE66001AEE8D /* SceneDelegate.h */,
-				71265B93239FFE66001AEE8D /* SceneDelegate.m */,
+				71BBB35B23A7EAE50090EFB6 /* SceneDelegate.h */,
+				71BBB35A23A7EAE50090EFB6 /* SceneDelegate.m */,
 				71BBB34A23A6D12B0090EFB6 /* BasePaymentViewController.h */,
 				71BBB34B23A6D12B0090EFB6 /* BasePaymentViewController.m */,
 				71265BE823A449C3001AEE8D /* PaymentViewController.h */,
@@ -232,6 +259,8 @@
 				71265BCE23A1B28F001AEE8D /* Constants.m */,
 				71BBB34D23A705FD0090EFB6 /* NSString+Utils.h */,
 				71BBB34E23A705FD0090EFB6 /* NSString+Utils.m */,
+				71BBB37023A9695D0090EFB6 /* Utils.h */,
+				71BBB37123A9695D0090EFB6 /* Utils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -288,6 +317,35 @@
 				71BBB35123A7C9A70090EFB6 /* AmountView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		71BBB35523A7E32F0090EFB6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				71BBB35623A7E4AB0090EFB6 /* Coordinator.h */,
+				71BBB35723A7E68B0090EFB6 /* ApplicationCoordinator.h */,
+				71BBB35823A7E68B0090EFB6 /* ApplicationCoordinator.m */,
+				71BBB35D23A7F9BC0090EFB6 /* PaymentCoordinator.h */,
+				71BBB35E23A7F9BC0090EFB6 /* PaymentCoordinator.m */,
+				71BBB36023A801CB0090EFB6 /* PaymentMethodsCoordinator.h */,
+				71BBB36123A801CB0090EFB6 /* PaymentMethodsCoordinator.m */,
+				71BBB36723A8082A0090EFB6 /* BanksCoordinator.h */,
+				71BBB36823A8082A0090EFB6 /* BanksCoordinator.m */,
+				71BBB36A23A813B40090EFB6 /* InstallmentsCoordinator.h */,
+				71BBB36B23A813B40090EFB6 /* InstallmentsCoordinator.m */,
+				71BBB36D23A8161B0090EFB6 /* SummaryCoordinator.h */,
+				71BBB36E23A8161B0090EFB6 /* SummaryCoordinator.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		71BBB36323A803C80090EFB6 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				71BBB36423A803F60090EFB6 /* UIViewController+Create.h */,
+				71BBB36523A803F60090EFB6 /* UIViewController+Create.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		839C2563D3D915888DEA6265 /* Frameworks */ = {
@@ -423,28 +481,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				71265BD523A2B950001AEE8D /* PaymentMethodTableViewCell.m in Sources */,
+				71BBB35923A7E68B0090EFB6 /* ApplicationCoordinator.m in Sources */,
 				71265BB723A03861001AEE8D /* BaseJSONModel.m in Sources */,
 				71265BE423A42DB0001AEE8D /* BanksViewModel.m in Sources */,
 				71265BEA23A449C3001AEE8D /* PaymentViewController.m in Sources */,
 				71BBB33D23A5510E0090EFB6 /* InstallmentsViewModel.m in Sources */,
 				71265BD823A2C6C6001AEE8D /* PaymentMethodCellViewModel.m in Sources */,
 				71BBB34023A5512B0090EFB6 /* InstallmentCellViewModel.m in Sources */,
+				71BBB36623A803F60090EFB6 /* UIViewController+Create.m in Sources */,
 				71BBB34F23A705FD0090EFB6 /* NSString+Utils.m in Sources */,
 				71265BBA23A039CF001AEE8D /* CardIssuerModel.m in Sources */,
+				71BBB37223A9695D0090EFB6 /* Utils.m in Sources */,
 				71BBB33A23A550D70090EFB6 /* InstallmentsViewController.m in Sources */,
+				71BBB36F23A8161B0090EFB6 /* SummaryCoordinator.m in Sources */,
 				71265BCC23A16BF8001AEE8D /* PaymentMethodsViewController.m in Sources */,
+				71BBB36923A8082A0090EFB6 /* BanksCoordinator.m in Sources */,
 				71265BC023A04CE8001AEE8D /* InstallmentModel.m in Sources */,
 				71265BCF23A1B28F001AEE8D /* Constants.m in Sources */,
 				71265BC323A12FEB001AEE8D /* SettingModel.m in Sources */,
 				71265B91239FFE66001AEE8D /* AppDelegate.m in Sources */,
 				71265BA2239FFE69001AEE8D /* main.m in Sources */,
+				71BBB35F23A7F9BC0090EFB6 /* PaymentCoordinator.m in Sources */,
 				71265BC623A1355C001AEE8D /* PayerCostsModel.m in Sources */,
 				71BBB34923A574350090EFB6 /* SummaryViewModel.m in Sources */,
 				71BBB34323A551540090EFB6 /* InstallmentTableViewCell.m in Sources */,
+				71BBB36223A801CB0090EFB6 /* PaymentMethodsCoordinator.m in Sources */,
 				71BBB33723A54F980090EFB6 /* BanksViewController.m in Sources */,
+				71BBB35C23A7EAE50090EFB6 /* SceneDelegate.m in Sources */,
+				71BBB36C23A813B40090EFB6 /* InstallmentsCoordinator.m in Sources */,
 				71265BDE23A429AC001AEE8D /* BaseViewModel.m in Sources */,
 				71265BE123A42C0B001AEE8D /* BankTableViewCell.m in Sources */,
-				71265B94239FFE66001AEE8D /* SceneDelegate.m in Sources */,
 				71BBB34C23A6D12B0090EFB6 /* BasePaymentViewController.m in Sources */,
 				71265BE723A42DEE001AEE8D /* BankCellViewModel.m in Sources */,
 				71265BB423A0339A001AEE8D /* APIManager.m in Sources */,

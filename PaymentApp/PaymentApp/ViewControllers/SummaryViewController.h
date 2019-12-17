@@ -11,8 +11,15 @@
 
 @class SummaryViewModel;
 
+@protocol SummaryViewControllerDelegate
+
+- (void)endProcess;
+
+@end
+
 @interface SummaryViewController : BasePaymentViewController
 
 @property (strong, nonatomic) SummaryViewModel *summaryViewModel;
+@property (weak, nonatomic) id<SummaryViewControllerDelegate> delegate;
 
 @end

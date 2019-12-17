@@ -29,4 +29,8 @@
     return self;
 }
 
+- (NSString *)issuerId {
+    return self.model.id;
+}
+
 @end

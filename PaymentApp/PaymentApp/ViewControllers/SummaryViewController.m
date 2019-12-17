@@ -23,9 +23,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.summaryViewModel = [SummaryViewModel new];
-    
     [self configViews];
+}
+
+#pragma mark - IBActions
+
+- (IBAction)endTouched:(id)sender {
+    [self.delegate endProcess];
 }
 
 #pragma mark - Custom Methods
@@ -38,6 +42,12 @@
     self.paymentMethodLabel.text = self.summaryViewModel.paymentMethod;
     self.bankLabel.text = self.summaryViewModel.bank;
     self.feeLabel.text = self.summaryViewModel.fee;
+    
+    self.amountLabel.hidden = self.summaryViewModel.amount? NO:YES;
+    self.paymentMethodLabel.hidden = self.summaryViewModel.amount? NO:YES;
+    self.bankLabel.hidden = self.summaryViewModel.amount? NO:YES;
+    self.feeLabel.hidden = self.summaryViewModel.amount? NO:YES;
+
 }
 
 

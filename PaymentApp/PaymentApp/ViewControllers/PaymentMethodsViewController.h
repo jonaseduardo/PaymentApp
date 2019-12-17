@@ -10,9 +10,17 @@
 #import "BasePaymentViewController.h"
 
 @class PaymentMethodsViewModel;
+@class PaymentMethodCellViewModel;
+
+@protocol PaymentMethodsViewControllerDelegate
+
+- (void)paymentMethodSelected:(PaymentMethodCellViewModel *)item;
+
+@end
 
 @interface PaymentMethodsViewController : BasePaymentViewController
 
 @property (strong, nonatomic) PaymentMethodsViewModel *paymentMethodsViewModel;
+@property (weak, nonatomic) id<PaymentMethodsViewControllerDelegate> delegate;
 
 @end

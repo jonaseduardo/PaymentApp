@@ -11,5 +11,6 @@
 @interface NSString (Utils)
 
 - (BOOL)stringIsNumeric;
+- (NSString *)formatAmount;
 
 @end

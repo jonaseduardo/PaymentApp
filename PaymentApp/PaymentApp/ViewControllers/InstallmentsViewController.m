@@ -97,13 +97,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    [self.delegate InstallmentSelected:[self.installmentsViewModel getCellViewModel:indexPath.row]];
 }
-
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-}
-
 
 @end

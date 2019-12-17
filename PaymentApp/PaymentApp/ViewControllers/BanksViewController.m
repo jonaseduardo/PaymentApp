@@ -67,7 +67,6 @@
 
 - (void)getBanks {
     
-    self.banksViewModel.paymentMethodId = @"visa";
     [self.banksViewModel getBanks];
 }
 
@@ -99,12 +98,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-}
-
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [self.delegate bankSelected:[self.banksViewModel getCellViewModel:indexPath.row]];
 }
 
 @end

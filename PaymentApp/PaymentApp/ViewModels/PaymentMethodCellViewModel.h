@@ -16,6 +16,8 @@
 @property (nonatomic, strong) NSString *paymentType;
 @property (nonatomic, strong) NSString *urlImage;
 
+@property (nonatomic, strong) NSString *paymentMethodId;
+
 - (instancetype)initWithModel:(PaymentMethodModel *)model;
 
 @end

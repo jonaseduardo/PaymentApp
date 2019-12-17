@@ -14,6 +14,8 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *urlImage;
 
+@property (strong, nonatomic) NSString *issuerId;;
+
 - (instancetype)initWithModel:(CardIssuerModel *)model;
 
 @end

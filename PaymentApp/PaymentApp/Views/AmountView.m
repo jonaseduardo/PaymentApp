@@ -68,6 +68,12 @@ static NSUInteger const MAX_LENGTH = 12;
     [self.amountTextField resignFirstResponder];
 }
 
+- (void)clearAmount {
+    
+    typedValue = 0;
+    self.amountTextField.text = @"";
+}
+
 - (NSString *)typedValueToCurrency {
     
     NSNumberFormatter *numberFormatter = [NSNumberFormatter new];

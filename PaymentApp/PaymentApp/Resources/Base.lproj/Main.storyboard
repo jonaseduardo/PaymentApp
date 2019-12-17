@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QXA-e9-gFc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,7 +11,7 @@
         <!--Payment View Controller-->
         <scene sceneID="XPa-1T-SKq">
             <objects>
-                <viewController id="f09-Zr-Y1W" customClass="PaymentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentViewController" id="f09-Zr-Y1W" customClass="PaymentViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8w5-94-vJK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,10 +23,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zw1-qU-Rp1">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="173.5" y="247" width="67" height="30"/>
+                                <state key="normal" title="Continuar"/>
                                 <connections>
-                                    <segue destination="2SD-4x-xaI" kind="show" id="LgH-7z-BT4"/>
+                                    <action selector="continueTouched:" destination="f09-Zr-Y1W" eventType="touchUpInside" id="eZj-6D-MCw"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="382" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="aUH-ZI-QHZ" customClass="AmountView">
@@ -36,14 +36,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="zw1-qU-Rp1" firstAttribute="top" secondItem="aUH-ZI-QHZ" secondAttribute="bottom" constant="16" id="3Qi-l2-Edb"/>
                             <constraint firstItem="mmU-Ya-m9w" firstAttribute="trailing" secondItem="aUH-ZI-QHZ" secondAttribute="trailing" constant="16" id="90s-NZ-xgc"/>
                             <constraint firstItem="mmU-Ya-m9w" firstAttribute="trailing" secondItem="qej-TK-M81" secondAttribute="trailing" constant="16" id="Acy-h0-T2t"/>
-                            <constraint firstItem="zw1-qU-Rp1" firstAttribute="centerY" secondItem="8w5-94-vJK" secondAttribute="centerY" id="EK3-35-jZW"/>
                             <constraint firstItem="aUH-ZI-QHZ" firstAttribute="leading" secondItem="mmU-Ya-m9w" secondAttribute="leading" constant="16" id="KhE-8u-YEb"/>
                             <constraint firstItem="aUH-ZI-QHZ" firstAttribute="top" secondItem="qej-TK-M81" secondAttribute="bottom" constant="24" id="OdZ-4J-OhN"/>
-                            <constraint firstItem="zw1-qU-Rp1" firstAttribute="centerX" secondItem="8w5-94-vJK" secondAttribute="centerX" id="bV6-C8-aPI"/>
                             <constraint firstItem="qej-TK-M81" firstAttribute="top" secondItem="mmU-Ya-m9w" secondAttribute="top" constant="16" id="nU6-hp-tm0"/>
                             <constraint firstItem="qej-TK-M81" firstAttribute="leading" secondItem="mmU-Ya-m9w" secondAttribute="leading" constant="16" id="qjj-Rk-A0w"/>
+                            <constraint firstItem="zw1-qU-Rp1" firstAttribute="centerX" secondItem="8w5-94-vJK" secondAttribute="centerX" id="tmS-wH-Wyy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mmU-Ya-m9w"/>
                     </view>
@@ -59,19 +59,19 @@
         <!--Banks View Controller-->
         <scene sceneID="TaO-hv-oFz">
             <objects>
-                <viewController id="WQg-F9-mok" customClass="BanksViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BanksViewController" id="WQg-F9-mok" customClass="BanksViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lex-Mm-pdW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione el banco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-5M-zqP">
-                                <rect key="frame" x="16" y="104" width="382" height="23"/>
+                                <rect key="frame" x="16" y="60" width="382" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gcq-Qo-Sf6">
-                                <rect key="frame" x="0.0" y="143" width="414" height="719"/>
+                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BankTableViewCell" rowHeight="80" id="6nf-UF-TPr" userLabel="BankTableViewCell" customClass="BankTableViewCell">
@@ -107,7 +107,6 @@
                                         <connections>
                                             <outlet property="bankImageView" destination="ES9-mN-Yq9" id="ptM-Ti-ORg"/>
                                             <outlet property="nameLabel" destination="OZ7-aw-XJF" id="miO-xG-dbK"/>
-                                            <segue destination="iCL-2g-WeJ" kind="show" id="MTv-pt-BAs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -141,19 +140,19 @@
         <!--Installments View Controller-->
         <scene sceneID="j7N-QR-Vae">
             <objects>
-                <viewController id="iCL-2g-WeJ" customClass="InstallmentsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InstallmentsViewController" id="iCL-2g-WeJ" customClass="InstallmentsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4i-lL-uzw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione la cantidad de cuotas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPc-f7-qQ6">
-                                <rect key="frame" x="16" y="104" width="382" height="23"/>
+                                <rect key="frame" x="16" y="60" width="382" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HK8-JX-tn1">
-                                <rect key="frame" x="0.0" y="143" width="414" height="719"/>
+                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InstallmentTableViewCell" rowHeight="80" id="tha-Bg-6E8" customClass="InstallmentTableViewCell">
@@ -189,7 +188,6 @@
                                         <connections>
                                             <outlet property="cftLabel" destination="1ac-y5-1dM" id="2CQ-e0-5Ai"/>
                                             <outlet property="feeLabel" destination="yxg-41-iHm" id="J4V-la-L6z"/>
-                                            <segue destination="9Wm-zw-ilk" kind="show" id="Gjb-Mt-n9k"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -223,19 +221,19 @@
         <!--Summary View Controller-->
         <scene sceneID="VNI-5c-HCO">
             <objects>
-                <viewController id="9Wm-zw-ilk" customClass="SummaryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SummaryViewController" id="9Wm-zw-ilk" customClass="SummaryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Hz-Hs-dQf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verifique si los datos son correctos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxT-ev-VXM">
-                                <rect key="frame" x="16" y="120" width="382" height="23"/>
+                                <rect key="frame" x="16" y="76" width="382" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ViJ-gS-vS3">
-                                <rect key="frame" x="0.0" y="175" width="414" height="106"/>
+                                <rect key="frame" x="0.0" y="131" width="414" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9r-zj-Y7I">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
@@ -263,6 +261,13 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ze-Y7-fpO">
+                                <rect key="frame" x="178.5" y="433" width="57" height="30"/>
+                                <state key="normal" title="Finalizar"/>
+                                <connections>
+                                    <action selector="endTouched:" destination="9Wm-zw-ilk" eventType="touchUpInside" id="xwh-Xp-fD8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -271,6 +276,8 @@
                             <constraint firstItem="sxT-ev-VXM" firstAttribute="top" secondItem="909-2q-0PB" secondAttribute="top" constant="32" id="7cc-pI-YDd"/>
                             <constraint firstItem="ViJ-gS-vS3" firstAttribute="top" secondItem="sxT-ev-VXM" secondAttribute="bottom" constant="32" id="JLg-on-8ZH"/>
                             <constraint firstItem="909-2q-0PB" firstAttribute="trailing" secondItem="sxT-ev-VXM" secondAttribute="trailing" constant="16" id="KNV-9j-QJt"/>
+                            <constraint firstItem="6ze-Y7-fpO" firstAttribute="centerY" secondItem="1Hz-Hs-dQf" secondAttribute="centerY" id="MEK-If-hQk"/>
+                            <constraint firstItem="6ze-Y7-fpO" firstAttribute="centerX" secondItem="1Hz-Hs-dQf" secondAttribute="centerX" id="dd9-ZN-e5l"/>
                             <constraint firstItem="ViJ-gS-vS3" firstAttribute="leading" secondItem="909-2q-0PB" secondAttribute="leading" id="q6T-5q-iKa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="909-2q-0PB"/>
@@ -290,19 +297,19 @@
         <!--Payment Methods View Controller-->
         <scene sceneID="dRx-48-LMe">
             <objects>
-                <viewController id="2SD-4x-xaI" customClass="PaymentMethodsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentMethodsViewController" id="2SD-4x-xaI" customClass="PaymentMethodsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n5h-3a-6bE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione un método de pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFf-hq-tUa">
-                                <rect key="frame" x="16" y="104" width="382" height="23"/>
+                                <rect key="frame" x="16" y="60" width="382" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2W7-Nw-qeg">
-                                <rect key="frame" x="0.0" y="143" width="414" height="719"/>
+                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentMethodCell" rowHeight="80" id="m6H-yQ-sAo" customClass="PaymentMethodTableViewCell">
@@ -351,7 +358,6 @@
                                             <outlet property="nameLabel" destination="7J7-YB-PZI" id="kyo-PK-6tT"/>
                                             <outlet property="paymentImageView" destination="Uh9-kQ-vJp" id="WzH-cs-eBo"/>
                                             <outlet property="typeLabel" destination="Eja-ZN-q8A" id="cZp-Dg-vtQ"/>
-                                            <segue destination="WQg-F9-mok" kind="show" id="bY1-sz-aE1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

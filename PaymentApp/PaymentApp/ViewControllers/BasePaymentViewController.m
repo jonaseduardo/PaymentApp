@@ -14,8 +14,21 @@
 
 @implementation BasePaymentViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)cleanData {
+}
+
+- (void)presentViewController:(UIViewController *)viewController andView:(UIView *)view {
+
+    [viewController addChildViewController:self];
+    [view addSubview:self.view];
+    [self didMoveToParentViewController:viewController];
+}
+
+- (void)removeViewController {
+    
+    [self willMoveToParentViewController:nil];
+    [self.view removeFromSuperview];
+    [self removeFromParentViewController];
 }
 
 @end

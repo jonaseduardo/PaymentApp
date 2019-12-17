@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "BasePaymentViewController.h"
 
+@protocol PaymentViewControllerDelegate
+
+- (void)amountCompleted:(NSString *)amount;
+
+@end
+
 @interface PaymentViewController : BasePaymentViewController
+
+@property (nonatomic, weak) id<PaymentViewControllerDelegate> delegate;
 
 @end

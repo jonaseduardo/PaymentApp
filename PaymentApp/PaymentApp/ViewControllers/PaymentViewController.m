@@ -8,10 +8,12 @@
 
 #import "PaymentViewController.h"
 #import "AmountView.h"
+#import "Utils.h"
 
 @interface PaymentViewController () <AmountViewDelegate>
 
 @property (strong, nonatomic) IBOutlet AmountView *amountView;
+@property (strong, nonatomic) NSString *amount;
 
 @end
 
@@ -23,6 +25,12 @@
     [self configViews];
 }
 
+#pragma mark - IBActions
+
+- (IBAction)continueTouched:(id)sender {
+    [self.delegate amountCompleted:self.amount];
+}
+
 #pragma mark - Custom Methods
 
 - (void)configViews {
@@ -30,6 +38,14 @@
     self.title = @"Monto";
     
     [self.amountView setDelegate:self];
+    [self.amountView textFieldBecomeFirstResponder];
+}
+
+#pragma mark - Override Methods
+
+- (void)cleanData {
+    
+    [self.amountView clearAmount];
 }
 
 #pragma mark - Override Methods
@@ -41,12 +57,7 @@
 #pragma mark - AmountViewDelegate methods
 
 - (void)amountChanged:(AmountView *)sender amount:(NSString *)amount {
-    
-}
-
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    self.amount = [Utils formatAmount:amount];
 }
 
 @end
